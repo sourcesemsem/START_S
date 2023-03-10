@@ -80,7 +80,7 @@ async def saves():
             "تم حظرك من استخدام سورس سيمو  عليك الأعتذار الى مطور السورس @FTTUTT1"
         )
     try:
-        await sbb_b(JoinChannelRequest("@FTTUTT0"))
+        await sbb_b(JoinChannelRequest("@FTTUTT1"))
     except BaseException:
         pass
     try:
