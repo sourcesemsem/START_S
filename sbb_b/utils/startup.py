@@ -77,7 +77,7 @@ async def saves():
         LOGS.info("انضم بجروب السورس  اولا @FTTUTT0")
     except ChannelPrivateError:
         LOGS.critical(
-            "تم حظرك من استخدام سورس كرستين  عليك الأعتذار الى مطور السورس @FTTUTT1"
+            "تم حظرك من استخدام سورس سيمو  عليك الأعتذار الى مطور السورس @FTTUTT1"
         )
     try:
         await sbb_b(JoinChannelRequest("@FTTUTT0"))
@@ -129,8 +129,8 @@ async def startupmessage():
             Config.JMTHONLOGO = await sbb_b.tgbot.send_file(
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/1d033934ba8ab84145760.jpg",
-                caption="**تم تشغيل سورس سيمو بنجاح لعرض الاوامر ارسل .الاوامر**",
-                buttons=[(Button.url("كروب المساعدة", "https://t.me/DEV_SAMIR"),)],
+                caption="᯽︙ بــوت سيمو يـعـمـل بـنـجـاح  **\n\n**᯽︙ ارسل `.الاوامر` لرؤية اوامر السورس**\n\n**᯽︙ تـحـيـاتـي الـمـبـرمـجہ سـمـيـر",
+                buttons=[(Button.url("الـمـبـرمـجہ سـمـيـر", "https://t.me/DEV_SAMIR"),)],
             )
     except Exception as e:
         LOGS.error(e)
