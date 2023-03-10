@@ -99,7 +99,7 @@ async def fetch_info(replied_user, event):
         and user_id != 1001132193
         else rozrtba
     )     
-    caption = " ╮•⎚ مـعلومات الـشخص مـن بـوت كرستين\n"
+    caption = " ╮•⎚ مـعلومات الـشخص مـن بـوت سيمو\n"
     caption += f"⌯╼═══❬ ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ ❭═══╾⌯\n"
     caption += f"╽<b>- ❃الاسـم ⇜ </b> {full_name}\n"
     caption += f"╽<b>- ❃المـعـرف ⇜ </b> {username}\n"
@@ -110,8 +110,7 @@ async def fetch_info(replied_user, event):
     caption += f"╽<b>-️ ❃الـنبـذه ⇜</b> \n<code>{user_bio}</code>\n"
     caption += f"╽<b>- رابط حسـابه ⇜</b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>\n'
-    caption += f"[ . ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ - ᥴ𝗆𝖽 ᭡ .](https://t.me/FTTUTY)\n"
-    caption += f"♤ @cr_source ♤"
+    caption += f"♤ @FTTUTY ♤"
     return photo, caption
 
 @sbb_b.ar_cmd(pattern="ايدي(?: |$)(.*)")
