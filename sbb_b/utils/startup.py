@@ -70,7 +70,7 @@ async def saves():
     except Exception as e:
         print(str(e))
     try:
-        await sbb_b(JoinChannelRequest("@FTTUTT0 "))
+        await sbb_b(JoinChannelRequest("@FTTUTT1"))
     except BotMethodInvalidError:
         pass
     except ChannelsTooMuchError:
