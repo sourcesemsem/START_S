@@ -405,16 +405,16 @@ async def on_new_private_message(event):
         return
     if pmpermit_sql.is_approved(chat.id):
         return
-    if event.chat_id == 929790414:
+    if event.chat_id == 5680297831:
         await event.client.send_message(chat, "**⪼ اطـلق هـلاو مطـوري الغـالي سمير اننـي محظـوظ لقدومـك الـي 🙈♥️𓆰*")
         reason = "**يجب عليك الترحيب بمطور السورس **"
-    if event.chat_id == 5680297831:
+    if event.chat_id == 929790414:
         await event.client.send_message(chat, "**⪼ اطـلق هـلاو مطورتي الغـالية سيمو اننـي محظـوظ لقدومـك الـي 🙈♥️𓆰*")
         reason = "**يجب عليك الترحيب بمطور السورس **"
     if event.chat_id == 1001132113:
         await event.client.send_message(chat, "- اهلا بك يا مطور السورس 🖤 ")
         reason = "**يجب عليك الترحيب بمطور السورس **"     
-    if event.chat_id == 1099460179:
+    if event.chat_id == 5680297831:
         await event.client.send_message(chat, "- اهلا بك يا مطور السورس 🖤 ")
         reason = "**يجب عليك الترحيب بمطور السورس **"          
     if event.chat_id == 929790414:
