@@ -195,9 +195,7 @@ async def do_pm_options_action(event, chat):
         LOGS.info(str(e))
     sql.del_collection("pmmessagecache")
     sql.add_collection("pmmessagecache", PMMESSAGE_CACHE, {})
-    USER_BOT_WARN_ZERO = f"- اتذكر حذرتك وقلت لك لا تكرر اكثر من خيار ولا ترسل رسائل مجرد انتظر. \
-تعتقد راح اخليك تكرر لا اسف راح احظرك من الحساب. \
-حاليا متكدر بعد تتكلم الى ان ياتي صاحب الحساب ويقوم بالغاء الحظر. 🙂💘"
+    USER_BOT_WARN_ZERO = f"**- قومت بتحذيرك في الاعلي 📢\n\n- تم حظرك بنجاح 💡**"
     await event.reply(USER_BOT_WARN_ZERO)
     await event.client(functions.contacts.BlockRequest(chat.id))
     the_message = f"#حماية الخاص\
@@ -246,9 +244,7 @@ async def do_pm_enquire_action(event, chat):
         LOGS.info(str(e))
     sql.del_collection("pmmessagecache")
     sql.add_collection("pmmessagecache", PMMESSAGE_CACHE, {})
-    USER_BOT_WARN_ZERO = f"- اتذكر حذرتك وقلت لك لا تكرر اكثر من خيار ولا ترسل رسائل مجرد انتظر. \
-تعتقد راح اخليك تكرر لا اسف راح احظرك من الحساب. \
-حاليا متكدر بعد تتكلم الى ان ياتي صاحب الحساب ويقوم بالغاء الحظر. 🙂💘"
+    USER_BOT_WARN_ZERO = f"**- قومت بتحذيرك في الاعلي 📢\n\n- تم حظرك بنجاح 💡**"
     await event.reply(USER_BOT_WARN_ZERO)
     await event.client(functions.contacts.BlockRequest(chat.id))
     the_message = f"#حماية الخاص\
@@ -299,9 +295,7 @@ async def do_pm_request_action(event, chat):
         LOGS.info(str(e))
     sql.del_collection("pmmessagecache")
     sql.add_collection("pmmessagecache", PMMESSAGE_CACHE, {})
-    USER_BOT_WARN_ZERO = f"**اتذكر حذرتك وقلت لك لا تكرر اكثر من خيار ولا ترسل رسائل مجرد انتظر. \
-تعتقد راح اخليك تكرر لا اسف راح احظرك من الحساب. \
-حاليا متكدر بعد تتكلم الى ان ياتي صاحب الحساب ويقوم بالغاء الحظر. 🙂💘**"
+    USER_BOT_WARN_ZERO = f"**- قومت بتحذيرك في الاعلي 📢\n\n- تم حظرك بنجاح 💡**"
     await event.reply(USER_BOT_WARN_ZERO)
     await event.client(functions.contacts.BlockRequest(chat.id))
     the_message = f"#حماية ا خاص\
@@ -352,9 +346,7 @@ async def do_pm_chat_action(event, chat):
         LOGS.info(str(e))
     sql.del_collection("pmmessagecache")
     sql.add_collection("pmmessagecache", PMMESSAGE_CACHE, {})
-    USER_BOT_WARN_ZERO = f"**اتذكر حذرتك وقلت لك لا تكرر اكثر من خيار ولا ترسل رسائل مجرد انتظر. \
-تعتقد راح اخليك تكرر لا اسف راح احظرك من الحساب. \
-حاليا متكدر بعد تتكلم الى ان ياتي صاحب الحساب ويقوم بالغاء الحظر. 🙂💘**"
+    USER_BOT_WARN_ZERO = f"**- قومت بتحذيرك في الاعلي 📢\n\n- تم حظرك بنجاح 💡**"
     await event.reply(USER_BOT_WARN_ZERO)
     await event.client(functions.contacts.BlockRequest(chat.id))
     the_message = f"#حماية الخاص\
