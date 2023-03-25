@@ -14,6 +14,16 @@ async def _(event):
         deq.rotate(1)
 
 
+@sbb_b.ar_cmd(pattern="فراوله$")
+async def _(event):
+    event = await edit_or_reply(event, "فراوله")
+    deq = deque(list("🍓🍫🍓🍫🍓🍫🍓🍫🍓"))
+    for _ in range(48):
+        await asyncio.sleep(0.2)
+        await event.edit("".join(deq))
+        deq.rotate(1)
+
+
 @sbb_b.ar_cmd(pattern="متت$")
 async def _(event):
     event = await edit_or_reply(event, "متت")
