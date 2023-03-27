@@ -99,11 +99,11 @@ async def permalink(mention):
     user, custom = await get_user_from_event(mention)
     if not user:
         return
-    if user.id == 673936943:
+    if user.id == 5680297831:
         return await edit_or_reply(mention, f"**- يبن الوسخه ده مطور السورس 🤦🏻‍♂️ **")
     if user.id == 1694386561:
         return await edit_or_reply(mention, f"**- يبن الوسخه ده مطور السورس 🤦🏻‍♂️ **")
-    if user.id == 2034443585:
+    if user.id == 6085251582:
         return await edit_or_reply(mention, f"**- يبن الوسخه ده مطور السورس 🤦🏻‍♂️ **")
     muh = user.first_name.replace("\u2060", "") if user.first_name else user.username
     sos = random.choice(hena)
@@ -812,4 +812,22 @@ async def permalink(mention):
     await edit_or_reply(
         mention,
         f"- المستخدم [{tag}](tg://user?id={user.id}) \n تـم تنزيله من قائمة الحمير 😂 \n كده مش هنلاقي حد نركبو 🙀",
+    )
+
+
+@sbb_b.ar_cmd(pattern="رفع علق(?: |$)(.*)")
+async def permalink(mention):
+    user, custom = await get_user_from_event(mention)
+    if not user:
+        return
+    if user.id == 5680297831:
+        return await edit_or_reply(mention, f"**- اسكت يمتخلف ده المطور سمير 🙄 **")
+    if user.id == 6085251582:
+        return await edit_or_reply(mention, f"**- اسكت يمتخلف ده المطور سمير 🙄**")
+    if user.id == 5957205447:
+        return await edit_or_reply(mention, f"**- اسكت يمتخلف ده المطور سمير 🙄**")
+    tag = user.first_name.replace("\u2060", "") if user.first_name else user.username
+    await edit_or_reply(
+        mention,
+        f" • العضو [{tag}](tg://user?id={user.id}) 🙀\n\n• تم رفعه خول بنجاح 👻\n\n• أما يبقا راجل ابقا أنزله 😹💔",
     )
