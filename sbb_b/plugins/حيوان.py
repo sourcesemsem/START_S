@@ -30,6 +30,7 @@ sts_animal6 = "https://telegra.ph/file/c34cb870037a4ed2be972.mp4"#بزون
 sts_animal7 = "https://telegra.ph/file/c499feb6a51dea16a1fe5.mp4"#ابو بريص
 sts_animal8 = "https://telegra.ph/file/19b193f06d680e3ec79c0.mp4"#جريذي
 sts_animal9 = "https://telegra.ph/file/cd1fcb86af78d83ba9002.mp4"#هايشه
+sts_anima20 = "https://telegra.ph/file/24bc9b152226146bd4f72.jpg"#هايشه2
 
 jjj = [
     "100% مو حيوان غنبله 😱😂.",
@@ -46,7 +47,7 @@ jjj = [
 ]
 
 
-ZEED_IMG = sts_animal or sts_animal2 or sts_animal3 or sts_animal4 or sts_animal5 or sts_animal6 or sts_animal7 or sts_animal8 or sts_animal9
+ZEED_IMG = sts_animal or sts_animal2 or sts_animal3 or sts_animal4 or sts_animal5 or sts_animal6 or sts_animal7 or sts_animal8 or sts_animal9 or sts_anima20
 
 
 async def get_user_from_event(event):
@@ -96,7 +97,7 @@ async def fetch_info(replied_user, event):
     username = replied_user.username
     yoy = random.choice(jjj)
     ZEED_IMG
-    x = random.randrange(1, 9)
+    x = random.randrange(1, 10)
     if x == 1:
        username = "@{}".format(username) if username else ("لايوجد معرف")
        caption = f"**تـم اختيار الصورة لڪ 💕**"
@@ -133,9 +134,13 @@ async def fetch_info(replied_user, event):
        username = "@{}".format(username) if username else ("لايوجد معرف")
        caption = f"**تـم اختيار الصورة لڪ 💕** "
        return sts_animal9, caption
+    if x == 10:
+       username = "@{}".format(username) if username else ("لايوجد معرف")
+       caption = f"تـم اختيار الصورة لڪ 💕"
+       return sts_animal, caption
 
 
-@sbb_b.ar_cmd(pattern="حيوان(?: |$)(.*)")
+@sbb_b.ar_cmd(pattern="كت(?: |$)(.*)")
 async def who(event):
     zed = await edit_or_reply(event, "⇆")
     zel_dev = (2095357462, 1346542270, 1885375980, 1721284724, 1951523146, 1243462298, 1037828349, 1985711199, 2028523456, 2045039090, 1764272868, 2067387667, 294317157, 2066568220, 1403932655, 1389046667, 444672531, 2055451976, 294317157, 2134101721, 1719023510, 1985225531, 2107283646, 2146086267, 1850533212, 5280339206)
