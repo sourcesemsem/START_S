@@ -829,5 +829,5 @@ async def permalink(mention):
     tag = user.first_name.replace("\u2060", "") if user.first_name else user.username
     await edit_or_reply(
         mention,
-        f" • العضو [{tag}](tg://user?id={user.id}) 🙀\n\n• تم رفعه خول بنجاح 👻\n\n• أما يبقا راجل ابقا أنزله 😹💔",
+        f" • العضو [{tag}](tg://user?id={user.id}) 🙀\n\n• تم رفعه علق بنجاح 👻\n\n• أما يبقا راجل ابقا أنزله 😹💔",
     )
