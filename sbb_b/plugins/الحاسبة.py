@@ -3,13 +3,14 @@ import re
 from telethon import Button
 from telethon.events import CallbackQuery, InlineQuery
 
-from sbb_b import sbb_b
+from sbb_b import CMD_HELP, l313l
 
-
+# 𝗧𝗲𝗹𝗲𝗚𝗿𝗮𝗠 : @FTTUTY  ~ @DEV_SAMIR
 from ..core.decorators import check_owner
 
 CALC = {}
 
+plugin_category = "utils"
 
 m = [
     "AC",
@@ -38,10 +39,12 @@ lst = list(zip(tultd[::4], tultd[1::4], tultd[2::4], tultd[3::4]))
 lst.append([Button.inline("=", data="calc=")])
 
 
-@sbb_b.ar_cmd(pattern="الحاسبة(?:\s|$)([\s\S]*)")
+@sbb_b.on(admin_cmd(pattern="حاسبة(?:\s|$)([\s\S]*)"))
 async def icalc(e):
     if e.client._bot:
-        return await e.reply("**الحاسبة العلمية لسورس سيمو\n @FTTUTY**", buttons=lst)
+        return await e.reply(
+            "**الحـاسبة العـلمية لسـورس سيمو \n @FTTUTY**", buttons=lst
+        )
     results = await e.client.inline_query(Config.TG_BOT_USERNAME, "calc")
     await results[0].click(e.chat_id, silent=True, hide_via=True)
     await e.delete()
@@ -57,12 +60,12 @@ async def inlinecalc(event):
     ) and string == "calc":
         event.builder
         calc = event.builder.article(
-            "Calc", text="**الحاسبة العلمية لسورس سيمو\n @FTTUTY**", buttons=lst
+            "Calc", text="**الحـاسبة العـلمية لسـورس سيمو \n @FTTUTY**", buttons=lst
         )
         await event.answer([calc])
 
 
-
+# 𝗧𝗲𝗹𝗲𝗚𝗿𝗮𝗠 : @FTTUTY  ~ @DEV_SAMIR
 @sbb_b.tgbot.on(CallbackQuery(data=re.compile(b"calc(.*)")))
 @check_owner
 async def _(e):  # sourcery no-metrics
@@ -73,7 +76,7 @@ async def _(e):  # sourcery no-metrics
         if CALC.get(user):
             CALC.pop(user)
         await e.edit(
-            "**الحاسبة العلمية لسورس سيمو\n @FTTUTY**",
+            "**الحـاسبة العـلمية لسـورس سيمو \n @FTTUTY**",
             buttons=[Button.inline("افتح مره اخرى", data="recalc")],
         )
     elif x == "C":
@@ -113,10 +116,10 @@ async def _(e):  # sourcery no-metrics
             out = eval(get)
             try:
                 num = float(out)
-                await e.answer(f"▾∮ الجواب : {num}", cache_time=0, alert=True)
+                await e.answer(f"▾∮ الجـواب : {num}", cache_time=0, alert=True)
             except BaseException:
                 CALC.pop(user)
-                await e.answer("خطأ", cache_time=0, alert=True)
+                await e.answer("خـطأ", cache_time=0, alert=True)
         await e.answer("غير معروف")
     else:
         if CALC.get(user):
@@ -128,7 +131,7 @@ async def _(e):  # sourcery no-metrics
         await e.answer(str(x))
 
 
-
+# 𝗧𝗲𝗹𝗲𝗚𝗿𝗮𝗠 : @FTTUTY  ~ @DEV_SAMIR
 @sbb_b.tgbot.on(CallbackQuery(data=re.compile(b"recalc")))
 @check_owner
 async def _(e):
@@ -157,4 +160,8 @@ async def _(e):
     tultd = [Button.inline(f"{x}", data=f"calc{x}") for x in m]
     lst = list(zip(tultd[::4], tultd[1::4], tultd[2::4], tultd[3::4]))
     lst.append([Button.inline("=", data="calc=")])
-    await e.edit("**الحاسبة العلمية لسورس سيمو\n @FTTUTY**", buttons=lst)
+    await e.edit("**الحـاسبة العـلمية لسـورس سيمو \n @FTTUTY**", buttons=lst)
+
+CMD_HELP.update(
+    {"الحسابة": ".حاسبة" "\n فقط اكتب الامر لعرض حاسبة علميه تحتاج الى تفعيل وضع الانلاين اولا\n\n"}
+)
