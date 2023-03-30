@@ -3,7 +3,7 @@ import re
 from telethon import Button
 from telethon.events import CallbackQuery, InlineQuery
 
-from sbb_b import CMD_HELP, l313l
+from sbb_b import CMD_HELP, sbb_b
 
 # 𝗧𝗲𝗹𝗲𝗚𝗿𝗮𝗠 : @FTTUTY  ~ @DEV_SAMIR
 from ..core.decorators import check_owner
