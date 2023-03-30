@@ -103,6 +103,19 @@ async def _(event):
         await event.reply("• اهـلا بـڪ مـطـوري [سـمـيـر](t.me/DEV_SAMIR)\n\n• قـنـاة السورس :  [إضـغـط هـنـا](https://t.me/FTTUTY)")
 
 
+@sbb_b.on(events.NewMessage(outgoing=False, pattern="منصب؟"))
+async def _(event):
+    user = await event.get_sender()
+    if user.id == 5680297831:
+        await event.reply("يب منصب ✓")
+
+
+@sbb_b.on(events.NewMessage(outgoing=False, pattern="مين فخر العرب"))
+async def _(event):
+    user = await event.get_sender()
+    if user.id == 5680297831:
+        await event.reply("انت فخر العرب مح ❤️")
+
 @sbb_b.ar_cmd(
     pattern="اطردني$",
     groups_only=True,
