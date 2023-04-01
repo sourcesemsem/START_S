@@ -1,7 +1,6 @@
-#𝙕𝙚𝙙𝙏𝙝𝙤𝙣 ®
-#الملـف حقـوق وكتابـة زلـزال الهيبـه ⤶ @zzzzl1l خاص بسـورس ⤶ 𝙕𝙚𝙙𝙏𝙝𝙤𝙣
-#الملـف متعـوب عليه تخمـط اذكر المصـدر
-#تعـديل بنيـتي 𝙈
+#◉ Developer Source : @DEV_SAMIR ∆
+
+#◉ Channel Source : @FTTUTY ∆
 
 import os
 import random
@@ -109,7 +108,7 @@ async def fetch_info(replied_user, event):
        caption += f"<b> • 🌚 | صـوره  ⇦ </b> {replied_user_profile_photos_count} </b>\n"
        caption += f"<b> • 🌚 | نــوعه   ⇦  مطي زربه 🦓 </b>\n"
        caption += f"<b> • 🌚 | نسبتـه  ⇦  {yoy} </b>\n\n\n"
-       caption += f"<b> 𓆩 ╼•✬• 𝐒𝐎𝐔𝐑𝐂𝐄 𝐒𝐄𝐌𝐎 ➪︎ @FTTUTY  •✬•╾ "
+       caption += f"<b> ⌯╼═══❬ ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ ❭═══╾⌯ "
        return sts_animal, caption
     if x == 2:
        username = "@{}".format(username) if username else ("لايوجد معرف")
@@ -131,7 +130,7 @@ async def fetch_info(replied_user, event):
        caption += f"<b> • 🌚 | صـوره  ⇦ </b> {replied_user_profile_photos_count} </b>\n"
        caption += f"<b> • 🌚 | نــوعه   ⇦  قرد لزكـه 🐒 </b>\n"
        caption += f"<b> • 🌚 | نسبتـه  ⇦  {yoy} </b>\n\n\n"
-       caption += f"<b> 𓆩 ╼•✬• 𝐒𝐎𝐔𝐑𝐂𝐄 𝐒𝐄𝐌𝐎 ➪︎ @FTTUTY  •✬•╾ 𓆪  "
+       caption += f"<b> ⌯╼═══❬ ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ ❭═══╾⌯ 𓆪  "
        return sts_animal3, caption
     if x == 4:
        username = "@{}".format(username) if username else ("لايوجد معرف")
@@ -142,7 +141,7 @@ async def fetch_info(replied_user, event):
        caption += f"<b> • 🌚 | صـوره  ⇦ </b> {replied_user_profile_photos_count} </b>\n"
        caption += f"<b> • 🌚 | نــوعه   ⇦  صخل محترم 🐐 </b>\n"
        caption += f"<b> • 🌚 | نسبتـه  ⇦  {yoy} </b>\n\n\n"
-       caption += f"<b> 𓆩 ╼•✬• 𝐒𝐎𝐔𝐑𝐂𝐄 𝐒𝐄𝐌𝐎 ➪︎ @FTTUTY •✬•╾ 𓆪  "
+       caption += f"<b> ⌯╼═══❬ ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ ❭═══╾⌯  "
        return sts_animal4, caption
     if x == 5:
        username = "@{}".format(username) if username else ("لايوجد معرف")
@@ -153,7 +152,7 @@ async def fetch_info(replied_user, event):
        caption += f"<b> • 🌚 | صـوره  ⇦ </b> {replied_user_profile_photos_count} </b>\n"
        caption += f"<b> • 🌚 | نــوعه   ⇦  طلي ابو البعرور الوصخ 🐑 </b>\n"
        caption += f"<b> • 🌚 | نسبتـه  ⇦  {yoy} </b>\n\n\n"
-       caption += f"<b> 𓆩 ╼•✬• 𝐒𝐎𝐔𝐑𝐂𝐄 𝐒𝐄𝐌𝐎 ➪︎ @FTTUTY  •✬•╾ 𓆪  "
+       caption += f"<b> ⌯╼═══❬ ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ ❭═══╾⌯ 𓆪  "
        return sts_animal5, caption
     if x == 6:
        username = "@{}".format(username) if username else ("لايوجد معرف")
@@ -164,7 +163,7 @@ async def fetch_info(replied_user, event):
        caption += f"<b> • 🌚 | صـوره  ⇦ </b> {replied_user_profile_photos_count} </b>\n"
        caption += f"<b> • 🌚 | نــوعه   ⇦  بزون ابوخالد 🐈 </b>\n"
        caption += f"<b> • 🌚 | نسبتـه  ⇦  {yoy} </b>\n\n\n"
-       caption += f"<b> 𓆩 ╼•✬• 𝐒𝐎𝐔𝐑𝐂𝐄 𝐒𝐄𝐌𝐎 ➪︎ @FTTUTY •✬•╾ 𓆪  "
+       caption += f"<b> ⌯╼═══❬ ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ ❭═══╾⌯  "
        return sts_animal6, caption
     if x == 7:
        username = "@{}".format(username) if username else ("لايوجد معرف")
@@ -175,7 +174,7 @@ async def fetch_info(replied_user, event):
        caption += f"<b> • 🌚 | صـوره  ⇦ </b> {replied_user_profile_photos_count} </b>\n"
        caption += f"<b> • 🌚 | نــوعه   ⇦  الزاحف ابو بريص 🦎 </b>\n"
        caption += f"<b> • 🌚 | نسبتـه  ⇦  {yoy} </b>\n\n\n"
-       caption += f"<b> 𓆩 ╼•✬• 𝐒𝐎𝐔𝐑𝐂𝐄 𝐒𝐄𝐌𝐎 ➪︎ @FTTUTY •✬•╾ 𓆪  "
+       caption += f"<b> ⌯╼═══❬ ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ ❭═══╾⌯  "
        return sts_animal7, caption
     if x == 8:
        username = "@{}".format(username) if username else ("لايوجد معرف")
@@ -186,7 +185,7 @@ async def fetch_info(replied_user, event):
        caption += f"<b> • 🌚 | صـوره  ⇦ </b> {replied_user_profile_photos_count} </b>\n"
        caption += f"<b> • 🌚 | نــوعه   ⇦  جريذي ابو المجاري 🐀 </b>\n"
        caption += f"<b> • 🌚 | نسبتـه  ⇦  {yoy} </b>\n\n\n"
-       caption += f"<b> 𓆩 ╼•✬• 𝐒𝐎𝐔𝐑𝐂𝐄 𝐒𝐄𝐌𝐎 ➪︎ @FTTUTY  •✬•╾ 𓆪  "
+       caption += f"<b> ⌯╼═══❬ ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ ❭═══╾⌯ 𓆪  "
        return sts_animal8, caption
     if x == 9:
        username = "@{}".format(username) if username else ("لايوجد معرف")
@@ -197,7 +196,7 @@ async def fetch_info(replied_user, event):
        caption += f"<b> • 🌚 | صـوره  ⇦ </b> {replied_user_profile_photos_count} </b>\n"
        caption += f"<b> • 🌚 | نــوعه   ⇦  هايشه 🐄 </b>\n"
        caption += f"<b> • 🌚 | نسبتـه  ⇦  {yoy} </b>\n\n\n"
-       caption += f"<b> 𓆩 ╼•✬• 𝐒𝐎𝐔𝐑𝐂𝐄 𝐒𝐄𝐌𝐎 ➪︎ @FTTUTY •✬•╾ 𓆪  "
+       caption += f"<b> ⌯╼═══❬ ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ ❭═══╾⌯"
        return sts_animal9, caption
 
 
