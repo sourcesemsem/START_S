@@ -143,7 +143,7 @@ Citation_morning = [
 async def ithker(knopis):
     await knopis.edit(choice(Citation_morning))
 
-Citation_morning = [
+Citation_morning10 = [
 "واحد مشغول أتجوز واحدة مشغولة خلفوا عيل مش فاضيلهم 👻😹",
 "مرة القمر كان عايز يتجوز الشمس قالتله أتجوز واحد صايع طول الليل 👻😹",
 
@@ -200,7 +200,7 @@ Citation_morning = [
 
 @sbb_b.on(admin_cmd(pattern="نكته$"))
 async def ithker(knopis):
-    await knopis.edit(choice(Citation_morning))
+    await knopis.edit(choice(Citation_morning10))
 
 Citation1_morning = [
     "** ‎كت تويت | أكثر شيء يُسكِت الطفل برأيك؟ **",
