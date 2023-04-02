@@ -26,7 +26,7 @@ samir8 = [
 
 @sbb_b.on(admin_cmd(pattern="رمزيات شباب$"))
 async def ithker(knopis):
-    await knopis.edit(choice(samir6))
+    await knopis.edit(choice(samir8))
 
 samir7 = [ "يومك ضاع على؟",
 "من اصدق في الحب الولد ولا البنت؟.",
