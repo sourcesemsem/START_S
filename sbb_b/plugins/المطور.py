@@ -4,8 +4,7 @@ from sbb_b import sbb_b
 
 from ..Config import Config
 
-ROZ_PIC = "https://telegra.ph/file/3fc81ce88a72c6458c664.jpg",
-          "https://telegra.ph/file/bf0bf872fd72bc376ce78.jpg",
+ROZ_PIC = sss or sss1 or sss2
 RAZAN = Config.TG_BOT_USERNAME
 ROZ_T = (
     f"**مطور سورس سيمو **\n"
@@ -64,3 +63,8 @@ async def repo(event):
 
 
 # edit by ~ @RR77R
+
+
+sss = "https://telegra.ph/file/19837ecdacbe2ff97875b.jpg"
+sss1 = "https://telegra.ph/file/3b514be187b4e82dff3de.jpg"
+sss2 = "https://telegra.ph/file/d09cb6b1985da0b034055.jpg"
