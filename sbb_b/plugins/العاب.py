@@ -75,7 +75,7 @@ async def ithker(knopis):
 
 # ================= Citation_morning =================
 
-@sbb_b.on(admin_cmd(pattern="رمزيات سكس"))
+@sbb_b.on(admin_cmd(pattern="رمزيات سكس$"))
 async def ithker(knopis):
     knopis.edit_photo("https://t.me/JABWA",caption="تيست")
 
