@@ -4,7 +4,8 @@ from sbb_b import sbb_b
 
 from ..Config import Config
 
-ROZ_PIC = "https://telegra.ph/file/3fc81ce88a72c6458c664.jpg"
+ROZ_PIC = "https://telegra.ph/file/3fc81ce88a72c6458c664.jpg",
+          "https://telegra.ph/file/bf0bf872fd72bc376ce78.jpg",
 RAZAN = Config.TG_BOT_USERNAME
 ROZ_T = (
     f"**مطور سورس سيمو **\n"
