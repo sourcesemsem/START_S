@@ -4,7 +4,7 @@ from sbb_b import sbb_b
 
 from ..Config import Config
 
-ROZ_PIC = sss or sss1 or sss2
+ROZ_PIC = "https://telegra.ph/file/fa12823b46f7e73fab195.jpg"
 RAZAN = Config.TG_BOT_USERNAME
 ROZ_T = (
     f"**مطور سورس سيمو **\n"
@@ -24,8 +24,6 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
                 [
                     Button.url("ㅤ𓏺 ժᥱ᥎ ᥉ᥲ️ꪔᎥٍᖇ . 🕷 ˼", "https://t.me/DEV_SAMIR"),
                     Button.url("𓏺 ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ . 🕷 ˼", "https://t.me/FTTUTY"),
-                    Button.url("ㅤ𓏺 𝖥𝗈𝗋 ᥉ᥲ️ꪔᎥٍᖇ . 🕷 ˼", "t.me/FTTUTT1"),
-                    Button.url("𓏺 Ⴆ᥆ƚ ᥉ᥱꪔ᥆ . 🕷 ˼", "https://t.me/SEMO15SBOT"),
                     
                 ]
             ]
@@ -62,9 +60,4 @@ async def repo(event):
     await event.delete()
 
 
-# edit by ~ @RR77R
-
-
-sss = "https://telegra.ph/file/19837ecdacbe2ff97875b.jpg"
-sss1 = "https://telegra.ph/file/3b514be187b4e82dff3de.jpg"
-sss2 = "https://telegra.ph/file/d09cb6b1985da0b034055.jpg"
+# edit by ~ @
