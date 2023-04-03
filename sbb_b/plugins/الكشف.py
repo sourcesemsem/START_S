@@ -1,6 +1,7 @@
 import html
 import os
 import base64
+import random
 
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import MessageEntityMentionName
@@ -151,4 +152,10 @@ async def permalink(mention):
     if custom:
         return await edit_or_reply(mention, f"[{custom}](tg://user?id={user.id})")
     tag = user.first_name.replace("\u2060", "") if user.first_name else user.username
-    await edit_or_reply(mention, f"⪼  [{tag}](tg://user?id={user.id})  𓆰. ")
+ edit_or_reply(mention, f"⪼  [{tag}](tg://user?id={user.id})  𓆰. ")
+
+@sbb_b.ar_cmd(pattern="لو خيروك بالصوره")
+async def iq(sbb_b,message):
+    await sbb_b.client.copy_message(sbb_b.chat_id,"SongSaidi",random.randint(2, 92),reply_to_message_id=message.id)
+
+
