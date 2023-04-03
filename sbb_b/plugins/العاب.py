@@ -74,6 +74,21 @@ async def ithker(knopis):
     await knopis.edit(choice(R))
 
 # ================= Citation_morning =================
+semo1 = [ "https://telegra.ph/file/8655459852c741b1822c0.jpg",
+"https://telegra.ph/file/b7bc46aa5db31d6bc1ed6.jpg",
+"https://telegra.ph/file/3b514be187b4e82dff3de.jpg",
+"https://telegra.ph/file/19837ecdacbe2ff97875b.jpg",
+"https://telegra.ph/file/d09cb6b1985da0b034055.jpg",
+"https://telegra.ph/file/f92a0a6c66f5d78a0d3b2.jpg",
+"https://telegra.ph/file/0317c2c5d8fdef7ebea4a.jpg",
+"https://telegra.ph/file/2291d0088520fa1f5f5ce.jpg",
+"https://telegra.ph/file/bf0bf872fd72bc376ce78.jpg", ]
+
+
+@sbb_b.on(admin_cmd(pattern="رمزيات شباب$"))
+async def ithker(knopis):
+    await knopis.edit(choice(semo1))
+
 samir3 = [ "عامل الناس بأخلاقك ولا بأخلاقهم", 
 "الجمال يلفت الأنظار لكن الطيبه تلفت القلوب ", 
 "الاعتذار عن الأخطاء لا يجرح كرامتك بل يجعلك كبير في نظر الناس ",
