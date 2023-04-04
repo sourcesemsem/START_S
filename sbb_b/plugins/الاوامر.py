@@ -52,6 +52,14 @@ async def hi(event):
     await event.delete()
 
 
+@sbb_b.ar_cmd(pattern="م30")
+async def hi(event):
+    await event.reply(
+        "⌯╼═══❬ ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ ❭═══╾⌯\n\n❃ `.لو خيروك`\n\n❃ `.كت`\n\n❃ `.نصيحه`\n\n❃ `.بوستات`\n\n❃ `.نكته`\n\n❃ `.اذكار`\n\n❃ `.اذكار الصباح`\n\n❃ `.صراحه`\n\n❃ `.كشف`\n\n❃ `.الذاتية تشغيل` امر حفظ الذاتية تلقائي\n\n❃ `.فيزا`\n\n❃ `.اوامر الرفع` \n\n❃ `اوامر التجميع`\n\n⌯╼═══❬ ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ ❭═══╾⌯"
+    )
+    await event.delete()
+
+
 @sbb_b.ar_cmd(pattern="م6")
 async def hi(event):
     await event.reply(
