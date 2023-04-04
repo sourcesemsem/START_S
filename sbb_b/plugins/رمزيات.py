@@ -38,7 +38,8 @@ jjj = [
 ]
 
 jabwa = random.randint(39,65)
-photo = f"https://t.me/GTTUTY/{jabwa}"
+ZEED_IMG = f"https://t.me/GTTUTY/{jabwa}"
+photo = ZEED_IMG
 
 async def get_user_from_event(event):
     if event.reply_to_msg_id:
