@@ -37,9 +37,7 @@ jjj = [
     "0% ٴ😢😂",
 ]
 
-jabwa = random.randint(39,65)
-ZEED_IMG = f"https://t.me/GTTUTY/{jabwa}"
-photo = ZEED_IMG
+photo = "https://t.me/GTTUTY/39"
 
 async def get_user_from_event(event):
     if event.reply_to_msg_id:
