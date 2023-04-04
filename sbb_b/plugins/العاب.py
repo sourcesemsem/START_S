@@ -682,7 +682,7 @@ Jepthon_Shnow = [
 ]
 
 
-@sbb_b.on(admin_cmd(pattern="م30$"))
+@sbb_b.on(admin_cmd(pattern="س30$"))
 async def ithker(knopis):
     await knopis.edit(choice(Jepthon_Shnow))
 
@@ -704,6 +704,6 @@ Jepthon_Bos = [
 ]
 
 
-@sbb_b.on(admin_cmd(pattern="م50$"))
+@sbb_b.on(admin_cmd(pattern="س50$"))
 async def ithker(knopis):
     await knopis.edit(choice(Jepthon_Bos))
