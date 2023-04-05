@@ -1,4 +1,6 @@
-#@DEV_SAMIR
+#◉ Developer Source : @DEV_SAMIR ∆
+
+#◉ Channel Source : @FTTUTY ∆
 
 import os
 import random
@@ -21,17 +23,23 @@ from . import mention
 plugin_category = "العروض"
 LOGS = logging.getLogger(__name__)
 
-sts_animal = [ "https://telegra.ph/file/720a8d292301289bb7ca4.mp4", "https://telegra.ph/file/fa43723297d16ebccfa94.mp4", "https://telegra.ph/file/bc4c35ca805ab9e4ef8d7.mp4", "https://telegra.ph/file/7cc42816b3e161f7183b6.mp4", "https://telegra.ph/file/8beaf555e0d4e3f00c294.mp4", "https://telegra.ph/file/c34cb870037a4ed2be972.mp4", "https://telegra.ph/file/c499feb6a51dea16a1fe5.mp4", "https://telegra.ph/file/19b193f06d680e3ec79c0.mp4", "https://telegra.ph/file/19b193f06d680e3ec79c0.mp4",
-
-]
+sts_animal = "https://telegra.ph/file/720a8d292301289bb7ca4.mp4"#مطي
+sts_animal2 = "https://telegra.ph/file/fa43723297d16ebccfa94.mp4" #كلب
+sts_animal3 = "https://telegra.ph/file/bc4c35ca805ab9e4ef8d7.mp4"#قرد
+sts_animal4 = "https://telegra.ph/file/7cc42816b3e161f7183b6.mp4"#صخل
+sts_animal5 = "https://telegra.ph/file/8beaf555e0d4e3f00c294.mp4"#طلي
+sts_animal6 = "https://telegra.ph/file/c34cb870037a4ed2be972.mp4"#بزون
+sts_animal7 = "https://telegra.ph/file/c499feb6a51dea16a1fe5.mp4"#ابو بريص
+sts_animal8 = "https://telegra.ph/file/19b193f06d680e3ec79c0.mp4"#جريذي
+sts_animal9 = "https://telegra.ph/file/cd1fcb86af78d83ba9002.mp4"#هہ‏‏ايشهہ‏‏
 
 jjj = [
-    "100% مو حيوان غنبله 😱😂.",
+    "100% مو حيوان غنبلهہ‏‏ 😱😂.",
     "90% مو حيوان ضيم 😱😂👆",
     "80%  ٴ😱😂",
     "70%  ٴ😱😂",
-    "60% براسه 60 حظ 👌😂",
-    "50% حيوان هجين👍😂",
+    "60% براسهہ‏‏ 60 حظ 👌😂",
+    "50% حيوان هہ‏‏جين👍😂",
     "( 40% ) خوش حيوان 👌😂",
     "30% ٴ😒😂",
     "20% ٴ😒😂",
@@ -90,11 +98,15 @@ async def fetch_info(replied_user, event):
     username = replied_user.username
     yoy = random.choice(jjj)
     ZEED_IMG
-    x = random.randrange(1, 9)
+    x = random.randrange(1, 2)
     if x == 1:
        username = "@{}".format(username) if username else ("لايوجد معرف")
-       caption = f"**تـم اختيار الصورة لڪ 💕**"
+       caption = f"تم اختيار الصوره لك"
        return sts_animal, caption
+    if x == 2:
+       username = "@{}".format(username) if username else ("لايوجد معرف")
+       caption = f"تم اختيار الصوره لك "
+       return sts_animal2, caption
 
 
 @sbb_b.ar_cmd(pattern="رمزيات(?: |$)(.*)")
@@ -109,9 +121,9 @@ async def who(event):
     except AttributeError:
         return await edit_or_reply(zed, "**- لـم استطـع العثــور ع الشخــص**")
     if replied_user.id in zel_dev:
-       return await edit_or_reply(zed, "**- دي . . انـهُ احـد المطـورين . . انتـه الحيـوان ولك**")
+       return await edit_or_reply(zed, "**- دي . . انـهہ‏‏ُ احـد المطـورين . . انتـهہ‏‏ الحيـوان ولك**")
     if replied_user.id == 925972505 or replied_user.id == 5680297831 or replied_user.id == 5680297831:
-       return await edit_or_reply(zed, "**- دي . . انـهُ المطـور . . انتـه الحيـوان ولك**")
+       return await edit_or_reply(zed, "**- دي . . انـهہ‏‏ُ المطـور . . انتـهہ‏‏ الحيـوان ولك**")
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
         message_id_to_reply = None
