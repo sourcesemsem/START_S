@@ -92,6 +92,6 @@ async def jepmeme(ALJoker):
 @sbb_b.on(admin_cmd(outgoing=True, pattern="صوره"))
 async def jepmeme(ALJoker):
   Jep = await reply_id(ALJoker)
-  url = f"https://t.me/GTTUTY/39"
+  url = f"https://telegra.ph/file/2291d0088520fa1f5f5ce.jpg"
   await ALJoker.client.send_photo(ALJoker.chat_id,url,caption="",parse_mode="html",reply_to=Jep)
   await ALJoker.delete()           
