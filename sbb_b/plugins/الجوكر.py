@@ -80,4 +80,11 @@ async def jepmeme(ALJoker):
   Jep = await reply_id(ALJoker)
   url = f"https://t.me/MemesVoices/4"
   await ALJoker.client.send_file(ALJoker.chat_id,url,caption="",parse_mode="html",reply_to=Jep)
-  await ALJoker.delete()                  
+  await ALJoker.delete()  
+
+@sbb_b.on(admin_cmd(outgoing=True, pattern="رمزي"))
+async def jepmeme(ALJoker):
+  Jep = await reply_id(ALJoker)
+  url = f"https://t.me/GTTUTY/39"
+  await ALJoker.client.send_file(ALJoker.chat_id,url,caption="",parse_mode="html",reply_to=Jep)
+  await ALJoker.delete()                
