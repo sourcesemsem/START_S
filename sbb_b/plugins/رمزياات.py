@@ -23,8 +23,8 @@ from . import mention
 plugin_category = "العروض"
 LOGS = logging.getLogger(__name__)
 
-sts_animal = "https://telegra.ph/file/bc4c35ca805ab9e4ef8d7.mp4"#مطي
-sts_animal2 = "https://telegra.ph/file/bc4c35ca805ab9e4ef8d7.mp4" #كلب
+sts_animal = "https://t.me/GTTUTY/60"#مطي
+sts_animal2 = "https://t.me/GTTUTY/61" #كلب
 sts_animal3 = "https://telegra.ph/file/bc4c35ca805ab9e4ef8d7.mp4"#قرد
 sts_animal4 = "https://telegra.ph/file/7cc42816b3e161f7183b6.mp4"#صخل
 sts_animal5 = "https://telegra.ph/file/8beaf555e0d4e3f00c294.mp4"#طلي
