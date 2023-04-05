@@ -102,12 +102,14 @@ async def fetch_info(replied_user, event):
     if x == 1:
        username = "@{}".format(username) if username else ("لايوجد معرف")
        caption = f"تم اختيار الصوره لك"
-       return sts_animal, caption
+       return sts_animal or sts_animal2 or sts_animal3 or sts_animal4 or sts_animal5 or sts_animal6 or sts_animal7 or sts_animal8 or sts_animal9
+, caption
 
     if x == 2:
        username = "@{}".format(username) if username else ("لايوجد معرف")
        caption = f"تم اختيار الصوره لك"
-       return sts_animal2, caption
+       return sts_animal or sts_animal2 or sts_animal3 or sts_animal4 or sts_animal5 or sts_animal6 or sts_animal7 or sts_animal8 or sts_animal9
+, caption
 
 
 @sbb_b.ar_cmd(pattern="رمزيات(?: |$)(.*)")
