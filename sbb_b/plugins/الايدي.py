@@ -8,7 +8,7 @@ from ..core.managers import edit_delete, edit_or_reply
 LOGS = logging.getLogger(__name__)
 
 
-@sbb_b.ar_cmd(pattern="الايدي(?:\s|.)([\s\S]*)")
+@sbb_b.ar_cmd(pattern="الايدي(?:\s|$)([\s\S]*)")
 async def _(event):
     if input_str := event.pattern_match.group(2):
         try:
