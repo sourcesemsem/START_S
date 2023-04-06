@@ -23,7 +23,9 @@ from . import mention
 plugin_category = "العروض"
 LOGS = logging.getLogger(__name__)
 
-samir = random.randint(39,65)
+samir = [ "https://telegra.ph/file/f92a0a6c66f5d78a0d3b2.jpg",
+"https://telegra.ph/file/5bf1ad45f6c17050a7b24.jpg", 
+] 
 samir1 = "https://telegra.ph/file/f92a0a6c66f5d78a0d3b2.jpg"
 ooo = samir or samir1
 jjj = [
