@@ -720,10 +720,10 @@ Jepthon_Bo = [
 async def ithker(knopis):
     await knopis.edit(choice(Jepthon_Bo))
 
-photo = [ "[تم الاختيار](https://telegra.ph/file/5bf1ad45f6c17050a7b24.jpg)",
-"[تم الاختيار](https://telegra.ph/file/5bf1ad45f6c17050a7b24.jpg)",
+photo = [ "•\n [تم الاختيار](https://telegra.ph/file/5bf1ad45f6c17050a7b24.jpg)",
+"•\n [تم الاختيار](https://telegra.ph/file/5bf1ad45f6c17050a7b24.jpg)",
 ]
 
-@sbb_b.on(admin_cmd(pattern="صور شباب$"))
+@sbb_b.on(admin_cmd(pattern="شباب$"))
 async def ithker(knopis):
     await knopis.edit(choice(photo))
