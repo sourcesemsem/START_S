@@ -61,7 +61,7 @@ async def zelzal_gpt(event):
 
 
 # code by t.me/zzzzl1l
-@sbb_b.zed_cmd(pattern="الوارد$")
+@sbb_b.ar_cmd(pattern="الوارد$")
 async def zelzal_gpt(event):
     chat = "@TeMail_Robot" # code by t.me/zzzzl1l
     zed = await edit_or_reply(event, "**⎉╎جـار جلب رسائـل البريـد 📬...**")
