@@ -719,3 +719,11 @@ Jepthon_Bo = [
 @sbb_b.on(admin_cmd(pattern="م3$"))
 async def ithker(knopis):
     await knopis.edit(choice(Jepthon_Bo))
+
+photo = [ "[تم الاختيار](https://telegra.ph/file/5bf1ad45f6c17050a7b24.jpg)",
+"[تم الاختيار](https://telegra.ph/file/5bf1ad45f6c17050a7b24.jpg)",
+]
+
+@sbb_b.on(admin_cmd(pattern="رمزيات شباب$"))
+async def ithker(knopis):
+    await knopis.edit(choice(photo))
