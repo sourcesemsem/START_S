@@ -79,9 +79,9 @@ async def zelzal_gpt(event):
                 return await borg.send_message(event.chat_id, aa)
             if "📬 Inbox" in zedthon.text:
                 await zed.delete()
-                return await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس ڪࢪستيڼ**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tcr • البـريد الـوارد")
+                return await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس سيمو**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tcr • البـريد الـوارد")
             await zed.delete()
-            await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس ڪࢪستيڼ**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tcr • البـريد الـوارد")
+            await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس سيمو**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tcr • البـريد الـوارد")
         except YouBlockedUserError:
             await sbb_b(unblock("TeMail_Robot"))
             await conv.send_message("/start")
@@ -96,6 +96,6 @@ async def zelzal_gpt(event):
                 return await borg.send_message(event.chat_id, aa)
             if "📬 Inbox" in zedthon.text:
                 await zed.delete()
-                return await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس ڪࢪستيڼ**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tcr • البـريد الـوارد")
+                return await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس سيمو**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tcr • البـريد الـوارد")
             await zed.delete()
-            await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس ڪࢪستيڼ**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tcr • البـريد الـوارد")
+            await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس سيمو**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tcr • البـريد الـوارد")
