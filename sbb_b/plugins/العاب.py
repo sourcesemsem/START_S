@@ -724,6 +724,6 @@ photo = [ "[تم الاختيار](https://telegra.ph/file/5bf1ad45f6c17050a7b24
 "[تم الاختيار](https://telegra.ph/file/5bf1ad45f6c17050a7b24.jpg)",
 ]
 
-@sbb_b.on(admin_cmd(pattern="رمزيات شباب$"))
+@sbb_b.on(admin_cmd(pattern="صور شباب$"))
 async def ithker(knopis):
     await knopis.edit(choice(photo))
