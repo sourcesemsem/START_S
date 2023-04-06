@@ -78,11 +78,11 @@ async def fetch_info(replied_user, event):
     first_name = (
         first_name.replace("\u2060", "")
         if first_name
-        else ("هذا المستخدم ليس لديه اسم اول")
+        else ("هذا المستخدم ليس لديه اسم")
     )
     full_name = full_name or first_name
     username = "@{}".format(username) if username else ("⌔∮ هذا المستخدم ليس لديه معرف")
-    user_bio = "⌔∮ هذا المستخدم ليس لديه اي نبذة" if not user_bio else user_bio
+    user_bio = "⌔∮  ليس لديه اي نبذة" if not user_bio else user_bio
     rozrtba = (
         ".「  مبرمج آلُِسورس 𓄂𓆃 」."
         if user_id == 5863439859 or user_id == 5680297831 or user_id == 5680297831 or user_id == 5566753847 or user_id == 5566753847 or user_id == 5680297831
@@ -99,7 +99,7 @@ async def fetch_info(replied_user, event):
         and user_id != 1001193
         else rozrtba
     )     
-    caption = " ╮•⎚ مـعلومات الـشخص مـن بـوت سيمو\n\n"
+    caption = " ╮•⎚ مـعلومات الـشخص مـن بـوت سيمو\n"
     caption += f"╽<b>- ❃الاسـم ⇜ </b> {full_name}\n"
     caption += f"╽<b>- ❃المـعـرف ⇜ </b> {username}\n"
     caption += f"╽<b>- ❃الايـدي  ⇜</b> <code>{user_id}</code>\n"
@@ -108,7 +108,8 @@ async def fetch_info(replied_user, event):
     caption += f"╽<b>- ❃الرتبـة ⇜</b>{rozrtba}\n"
     caption += f"╽<b>-️ ❃الـنبـذه ⇜</b> \n<code>{user_bio}</code>\n"
     caption += f"╽<b>- ❃رابط الحسـاب ⇜</b> "
-    caption += f'<a href="tg://user?id={user_id}">{first_name}</a>\n'
+    caption += f'<a href="tg://user?id={user_id}">{first_name}</a>\n\n'
+    caption += f"⌯╼═══❬ ᥉᥆υᖇᥴᥱ ᥉ᥱꪔ᥆ ❭═══╾⌯"
     return photo, caption
 
 @sbb_b.ar_cmd(pattern="ايدي(?: |$)(.*)")
