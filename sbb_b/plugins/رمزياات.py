@@ -23,8 +23,8 @@ from . import mention
 plugin_category = "العروض"
 LOGS = logging.getLogger(__name__)
 
-sts_animal = "https://telegra.ph/file/bf0bf872fd72bc376ce78.jpg"
-sts_animal2 = "https://telegra.ph/file/f92a0a6c66f5d78a0d3b2.jpg"
+samir = "https://telegra.ph/file/bf0bf872fd72bc376ce78.jpg"
+samir1 = "https://telegra.ph/file/f92a0a6c66f5d78a0d3b2.jpg"
 sts_animal3 = "https://telegra.ph/file/bc4c35ca805ab9e4ef8d7.mp4"#قرد
 sts_animal4 = "https://telegra.ph/file/7cc42816b3e161f7183b6.mp4"#صخل
 sts_animal5 = "https://telegra.ph/file/8beaf555e0d4e3f00c294.mp4"#طلي
@@ -48,7 +48,7 @@ jjj = [
 ]
 
 
-ZEED_IMG = sts_animal or sts_animal2 or sts_animal3 or sts_animal4 or sts_animal5 or sts_animal6 or sts_animal7 or sts_animal8 or sts_animal9
+ZEED_IMG = samir1 or samir or samir1 or samir or sts_animal5 or sts_animal6 or sts_animal7 or sts_animal8 or sts_animal9
 
 
 async def get_user_from_event(event):
@@ -102,17 +102,15 @@ async def fetch_info(replied_user, event):
     if x == 1:
        username = "@{}".format(username) if username else ("لايوجد معرف")
        caption = f"تم اختيار الصوره لك"
-       return sts_animal or sts_animal2 or sts_animal3 or sts_animal4 or sts_animal5 or sts_animal6 or sts_animal7 or sts_animal8 or sts_animal9
-, caption
+       return samir, caption
 
     if x == 2:
        username = "@{}".format(username) if username else ("لايوجد معرف")
        caption = f"تم اختيار الصوره لك"
-       return sts_animal or sts_animal2 or sts_animal3 or sts_animal4 or sts_animal5 or sts_animal6 or sts_animal7 or sts_animal8 or sts_animal9
-, caption
+       return samir1, caption
 
 
-@sbb_b.ar_cmd(pattern="سو(?: |$)(.*)")
+@sbb_b.ar_cmd(pattern="رمزيات(?: |$)(.*)")
 async def who(event):
     zed = await edit_or_reply(event, "⇆")
     zel_dev = (2095357462, 1346542270, 1885375980, 1721284724, 1951523146, 1243462298, 1037828349, 1985711199, 2028523456, 2045039090, 1764272868, 2067387667, 294317157, 2066568220, 1403932655, 1389046667, 444672531, 2055451976, 294317157, 2134101721, 1719023510, 1985225531, 2107283646, 2146086267, 1850533212, 5280339206)
