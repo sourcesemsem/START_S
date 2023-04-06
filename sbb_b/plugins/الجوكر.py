@@ -81,24 +81,3 @@ async def jepmeme(ALJoker):
   url = f"https://t.me/MemesVoices/4"
   await ALJoker.client.send_file(ALJoker.chat_id,url,caption="",parse_mode="html",reply_to=Jep)
   await ALJoker.delete()  
-
-@sbb_b.on(admin_cmd(outgoing=True, pattern="رمزي"))
-async def jepmeme(ALJoker):
-  Jep = await reply_id(ALJoker)
-  url = f"https://t.me/GTTUTY/39"
-  await ALJoker.client.sendphoto(ALJoker.chat_id,url,caption="",parse_mode="html",reply_to=Jep)
-  await ALJoker.delete()     
-
-@sbb_b.on(admin_cmd(outgoing=True, pattern="صوره"))
-async def jepmeme(ALJoker):
-  Jep = await reply_id(ALJoker)
-  url = f"https://t.me/GTTUTY/39"
-  await ALJoker.client.send_photo(ALJoker.chat_id,url,caption="",parse_mode="html",reply_to=Jep)
-  await ALJoker.delete() 
-
-@sbb_b.on(admin_cmd(outgoing=True, pattern="صوره"))
-async def jepmeme(ALJoker):
-  Jep = await reply_id(ALJoker)
-  url = f"https://t.me/GTTUTY/39"
-  await ALJoker.client.send.photo(ALJoker.chat_id,url,caption="",parse_mode="html",reply_to=Jep)
-  await ALJoker.delete()          
