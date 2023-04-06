@@ -1,7 +1,6 @@
 import html
 import os
 import base64
-import random
 
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import MessageEntityMentionName
@@ -85,19 +84,19 @@ async def fetch_info(replied_user, event):
     username = "@{}".format(username) if username else ("⌔∮ هذا المستخدم ليس لديه معرف")
     user_bio = "⌔∮ هذا المستخدم ليس لديه اي نبذة" if not user_bio else user_bio
     rozrtba = (
-        ".「  مآلُِڪ آلُِسورس 𓄂𓆃 」."
-        if user_id == 5863439859 or user_id == 5680297831 or user_id == 5680297831 or user_id == 1099460779 or user_id == 5863439859 or user_id == 5680297831
+        ".「  مبرمج آلُِسورس 𓄂𓆃 」."
+        if user_id == 5863439859 or user_id == 5680297831 or user_id == 5680297831 or user_id == 5566753847 or user_id == 5566753847 or user_id == 5680297831
         else (".「  العضـو 𓅫 」.")
     )
     rozrtba = (
         ".「 مـالك الحساب  」."
         if user_id == (await event.client.get_me()).id
-        and user_id != 1833610203
+        and user_id != 1833203
         and user_id != 627658332
-        and user_id != 1099460779
-        and user_id != 1355571767
-        and user_id != 1050898456
-        and user_id != 1001132193
+        and user_id != 10990779
+        and user_id != 13551767
+        and user_id != 1058456
+        and user_id != 1001193
         else rozrtba
     )     
     caption = " ╮•⎚ مـعلومات الـشخص مـن بـوت سيمو\n\n"
@@ -105,16 +104,16 @@ async def fetch_info(replied_user, event):
     caption += f"╽<b>- ❃المـعـرف ⇜ </b> {username}\n"
     caption += f"╽<b>- ❃الايـدي  ⇜</b> <code>{user_id}</code>\n"
     caption += f"╽<b>- ❃الـمجموعات المشتـركة ⇜</b> {common_chat}\n"
-    caption += f"╽<b>- عـدد ❃الصـورة ⇜</b> {replied_user_profile_photos_count}\n"
+    caption += f"╽<b>- ❃عـدد الصـور ⇜</b> {replied_user_profile_photos_count}\n"
     caption += f"╽<b>- ❃الرتبـة ⇜</b>{rozrtba}\n"
     caption += f"╽<b>-️ ❃الـنبـذه ⇜</b> \n<code>{user_bio}</code>\n"
-    caption += f"╽<b>- رابط حسـابهہ‏‏ ⇜</b> "
+    caption += f"╽<b>- ❃رابط الحسـاب ⇜</b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>\n'
     return photo, caption
 
 @sbb_b.ar_cmd(pattern="كشف(?: |$)(.*)")
 async def who(event):
-    roz = await edit_or_reply(event, "⇆")
+    roz = await edit_or_reply(event, "جاري الكشف عن المستخدم")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     replied_user = await get_user_from_event(event)
@@ -150,10 +149,4 @@ async def permalink(mention):
     if custom:
         return await edit_or_reply(mention, f"[{custom}](tg://user?id={user.id})")
     tag = user.first_name.replace("\u2060", "") if user.first_name else user.username
- edit_or_reply(mention, f"⪼  [{tag}](tg://user?id={user.id})  𓆰. ")
-
-@sbb_b.ar_cmd(pattern="لو خيروك بالصوره(?: |$)(.*)")
-async def iq(sbb_b,message):
-    await sbb_b.client.copy_message(sbb_b.chat_id,"SongSaidi",random.randint(2, 92),reply_to_message_id=message.id)
-
-
+    await edit_or_reply(mention, f"⪼  [{tag}](tg://user?id={user.id})  𓆰. ")
