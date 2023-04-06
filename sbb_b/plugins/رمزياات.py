@@ -23,15 +23,8 @@ from . import mention
 plugin_category = "العروض"
 LOGS = logging.getLogger(__name__)
 
-samir = "https://telegra.ph/file/bf0bf872fd72bc376ce78.jpg"
+samir = random.randint(39,65)
 samir1 = "https://telegra.ph/file/f92a0a6c66f5d78a0d3b2.jpg"
-sts_animal3 = "https://telegra.ph/file/bc4c35ca805ab9e4ef8d7.mp4"#قرد
-sts_animal4 = "https://telegra.ph/file/7cc42816b3e161f7183b6.mp4"#صخل
-sts_animal5 = "https://telegra.ph/file/8beaf555e0d4e3f00c294.mp4"#طلي
-sts_animal6 = "https://telegra.ph/file/c34cb870037a4ed2be972.mp4"#بزون
-sts_animal7 = "https://telegra.ph/file/c499feb6a51dea16a1fe5.mp4"#ابو بريص
-sts_animal8 = "https://telegra.ph/file/19b193f06d680e3ec79c0.mp4"#جريذي
-sts_animal9 = "https://telegra.ph/file/cd1fcb86af78d83ba9002.mp4"#هہ‏‏ايشهہ‏‏
 
 jjj = [
     "100% مو حيوان غنبلهہ‏‏ 😱😂.",
@@ -48,9 +41,9 @@ jjj = [
 ]
 
 
-ZEED_IMG = samir1 or samir or samir1 or samir or sts_animal5 or sts_animal6 or sts_animal7 or sts_animal8 or sts_animal9
+ZEED_IMG = f"https://t.me/GTTUTY/{samir}"
 
-
+ZEED_IMG = photo
 async def get_user_from_event(event):
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
@@ -102,12 +95,12 @@ async def fetch_info(replied_user, event):
     if x == 1:
        username = "@{}".format(username) if username else ("لايوجد معرف")
        caption = f"تم اختيار الصوره لك"
-       return samir, caption
+       return photo, caption
 
     if x == 2:
        username = "@{}".format(username) if username else ("لايوجد معرف")
        caption = f"تم اختيار الصوره لك"
-       return samir1, caption
+       return photo, caption
 
 
 @sbb_b.ar_cmd(pattern="رمزيات(?: |$)(.*)")
