@@ -29,7 +29,7 @@ plugin_category = "البوت"
 
 
 # code by t.me/zzzzl1l
-@sbb_b.zed_cmd(pattern="بريد$")
+@sbb_b.ar_cmd(pattern="بريد$")
 async def zelzal_gpt(event):
     chat = "@TeMail_Robot" # code by t.me/zzzzl1l
     zed = await edit_or_reply(event, "**⎉╎جـار إنشـاء ايميـل وهمـي 📧...**")
