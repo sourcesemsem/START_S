@@ -42,8 +42,6 @@ jjj = [
 
 
 ZEED_IMG = f"https://t.me/GTTUTY/{samir}"
-
-ZEED_IMG = photo
 async def get_user_from_event(event):
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
@@ -95,12 +93,12 @@ async def fetch_info(replied_user, event):
     if x == 1:
        username = "@{}".format(username) if username else ("لايوجد معرف")
        caption = f"تم اختيار الصوره لك"
-       return photo, caption
+       return samir1, caption
 
     if x == 2:
        username = "@{}".format(username) if username else ("لايوجد معرف")
        caption = f"تم اختيار الصوره لك"
-       return photo, caption
+       return samir, caption
 
 
 @sbb_b.ar_cmd(pattern="رمزيات(?: |$)(.*)")
