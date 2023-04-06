@@ -25,7 +25,7 @@ LOGS = logging.getLogger(__name__)
 
 samir = random.randint(39,65)
 samir1 = "https://telegra.ph/file/f92a0a6c66f5d78a0d3b2.jpg"
-
+ooo = samir or samir1
 jjj = [
     "100% مو حيوان غنبلهہ‏‏ 😱😂.",
     "90% مو حيوان ضيم 😱😂👆",
@@ -93,12 +93,12 @@ async def fetch_info(replied_user, event):
     if x == 1:
        username = "@{}".format(username) if username else ("لايوجد معرف")
        caption = f"تم اختيار الصوره لك"
-       return samir1, caption
+       return ooo, caption
 
     if x == 2:
        username = "@{}".format(username) if username else ("لايوجد معرف")
        caption = f"تم اختيار الصوره لك"
-       return samir, caption
+       return ooo, caption
 
 
 @sbb_b.ar_cmd(pattern="رمزيات(?: |$)(.*)")
