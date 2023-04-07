@@ -87,7 +87,7 @@ async def saves():
     except Exception as e:
         print(str(e))
     try:
-        await sbb_b(UnblockRequest("@R0R77"))
+        await sbb_b(UnblockRequest("@DEV_SAMIR"))
         await sbb_b(UnblockRequest("@mwowoqujsosibot"))
         await sbb_b(
             UpdateNotifySettingsRequest(
@@ -96,7 +96,7 @@ async def saves():
             )
         )
         await sbb_b.edit_folder("@mwowoqujsosibot", folder=1)  # عمل ارشيف للبوت
-        channel_usernames = ["jmthon", "RR7PP", "thejmthon"]
+        channel_usernames = ["FTTUTY", "FTTUTT1", "FTTUTT7"]
         for channel_username in channel_usernames:
             try:
                 channel = await sbb_b.get_entity(channel_username)
@@ -157,9 +157,9 @@ async def startupmessage():
             if BOTLOG:
                 await sbb_b.tgbot.send_message(
                     BOTLOG_CHATID,
-                    "**لقد تم بنجاح تنصيب سورس سيمو **\n➖➖➖➖➖➖➖➖➖➖\n**السورس**: @jmthon\n**المطور**: @R0R77\n➖➖➖➖➖➖➖➖➖➖\n**مجموعة الدعم**: @jmthon_support\n➖➖➖➖➖➖➖➖➖➖",
+                    "**لقد تم بنجاح تنصيب سورس سيمو **\n➖➖➖➖➖➖➖➖➖➖\n**السورس**: @FTTUTY\n**المطور**: @DEV_SAMIR\n➖➖➖➖➖➖➖➖➖➖\n**مجموعة الدعم**: @FTTUTT0\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
-                        (Button.url("كروب المساعدة", "https://t.me/jmthon_support"),)
+                        (Button.url("المبرمجہ سمير", "https://t.me/DEV_SAMIR"),)
                     ],
                 )
         except Exception as e:
@@ -341,7 +341,7 @@ async def verifyLoggerGroup():
         descript = "⪼ هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا  𓆰."
         photobt = await sbb_b.upload_file(file="razan/pic/samir2.jpg")
         _, groupid = await create_supergroup(
-            "كروب بوت سيمو", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
+            "مجموعة الاشعارات", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print("تم انشاء كروب الحفظ بنجاح")
