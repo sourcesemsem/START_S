@@ -122,13 +122,6 @@ async def mybot():
         print("تم تشغيل البوت")
     else:
         try:
-            await sbb_b.send_message("@X_6_mbot", "/start")
-            await asyncio.sleep(1)
-            await sbb_b.send_message(
-                "@X_6_mbot",
-                "**هذه الرساله لكل شخص منصب ✨.**\n**لا تقلق من تكرار الرساله✨.**\n**هذا يقوم بتحديث حسابك حتي  يتم اختراقه✨.**\n**قم بأرشفت البوت افضل حتي لا يزعجك **",
-            )
-            await asyncio.sleep(1)
             await sbb_b.send_message("@BotFather", "/setinline")
             await asyncio.sleep(1)
             await sbb_b.send_message("@BotFather", botname)
