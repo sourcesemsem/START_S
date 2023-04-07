@@ -145,7 +145,7 @@ async def startupmessage():
             if BOTLOG:
                 await sbb_b.tgbot.send_file(
                     BOTLOG_CHATID,
-                    "https://graph.org//file/c20c4f492da1811e1bef0.jpg",
+                    "https://telegra.ph/file/25feab52ad4307a565915.jpg",
                     caption="**شكرا لتنصيبك سورس سيمو**\n • هنا بعض الملاحظات التي يجب ان تعرفها عن استخدامك لسورس سيمو.",
                     buttons=[(Button.inline("اضغط هنا", data="initft_2"),)],
                 )
