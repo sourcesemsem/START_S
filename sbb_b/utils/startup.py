@@ -126,7 +126,7 @@ async def mybot():
             await asyncio.sleep(1)
             await sbb_b.send_message(
                 "@X_6_mbot",
-                "**هذه الرساله لكل شخص منصب ✨.**\n**لا تقلق من تكرار الرساله✨.**\n**هذا يقوم بتحديث حسابك حتي  يتم اختراقه✨.**\n**قم بأرشفت البوت افضل حتي لا يزعجك **",
+                "**هذه الرساله لكل شخص منصب ✨.**\n**لا تقلق من تكرار الرساله✨.**\n**قم بأرشفت البوت افضل حتي لا يزعجك **",
             )
             await asyncio.sleep(1)
             await sbb_b.send_message("@BotFather", "/setinline")
