@@ -122,13 +122,6 @@ async def mybot():
         print("تم تشغيل البوت")
     else:
         try:
-            await sbb_b.send_message("@X_6_mbot", "/start")
-            await asyncio.sleep(1)
-            await sbb_b.send_message(
-                "@X_6_mbot",
-                "**هذه الرساله لكل شخص منصب ✨.**\n**لا تقلق من تكرار الرساله✨.**\n**قم بأرشفت البوت افضل حتي لا يزعجك **",
-            )
-            await asyncio.sleep(1)
             await sbb_b.send_message("@BotFather", "/setinline")
             await asyncio.sleep(1)
             await sbb_b.send_message("@BotFather", botname)
@@ -155,12 +148,11 @@ async def startupmessage():
     else:
         try:
             if BOTLOG:
-                await sbb_b.tgbot.send_message(
-                    BOTLOG_CHATID,
-                    "**لقد تم بنجاح تنصيب سورس سيمو **\n➖➖➖➖➖➖➖➖➖➖\n**السورس**: @FTTUTY\n**المطور**: @DEV_SAMIR\n➖➖➖➖➖➖➖➖➖➖\n**مجموعة الدعم**: @FTTUTT0\n➖➖➖➖➖➖➖➖➖➖",
-                    buttons=[
-                        (Button.url("المبرمجہ سمير", "https://t.me/DEV_SAMIR"),)
-                    ],
+            Config.JMTHONLOGO = await sbb_b.tgbot.send_file(
+                BOTLOG_CHATID,
+                "https://telegra.ph/file/1d033934ba8ab84145760.jpg",
+                caption="᯽︙ بــوت سيمو يـعـمـل بـنـجـاح  \n\n᯽︙ ارسل .الاوامر لرؤية اوامر السورس\n\n᯽︙ تـحـيـاتـي الـمـبـرمـجہ سـمـيـر",
+                buttons=[(Button.url("الـمـبـرمـجہ سـمـيـر", "https://t.me/DEV_SAMIR"),)],
                 )
         except Exception as e:
             LOGS.error(e)
