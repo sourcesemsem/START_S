@@ -1,23 +1,16 @@
 import asyncio
 import glob
 import os
-import re
 import sys
 import urllib.request
 from datetime import timedelta
 from pathlib import Path
 
 from telethon import Button, functions, types, utils
-from telethon.events import CallbackQuery
-from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.tl.functions.channels import JoinChannelRequest
-from telethon.tl.functions.contacts import UnblockRequest
-from telethon.tl.functions.messages import GetMessagesViewsRequest
-from telethon.tl.types import InputPeerNotifySettings
+from telethon.errors import BotMethodInvalidError, ChannelPrivateError, ChannelsTooMuchError
 
 from sbb_b import BOTLOG, BOTLOG_CHATID, PM_LOGGER_GROUP_ID
-from razan.CMD.utils import *
-
 from ..Config import Config
 from ..core.logger import logging
 from ..core.session import sbb_b
@@ -69,16 +62,6 @@ async def setup_bot():
         sys.exit()
 
 
-async def forjmdev(thchannel):
-    try:
-        channel = await sbb_b.get_entity(thchannel)
-        messages = await sbb_b.get_messages(channel, limit=5)
-        message_ids = [msg.id for msg in messages]
-        await sbb_b(GetMessagesViewsRequest(peer=channel, id=message_ids))
-    except Exception as e:
-        print(f"{e}")
-
-
 async def saves():
     try:
         os.environ[
@@ -87,48 +70,46 @@ async def saves():
     except Exception as e:
         print(str(e))
     try:
-        await sbb_b(UnblockRequest("@R0R77"))
-        await sbb_b(UnblockRequest("@mwowoqujsosibot"))
-        await sbb_b(
-            UpdateNotifySettingsRequest(
-                peer="t.me/mwowoqujsosibot",
-                settings=InputPeerNotifySettings(mute_until=2**31 - 1),
-            )
+        await sbb_b(JoinChannelRequest("@FTTUTT1"))
+    except BotMethodInvalidError:
+        pass
+    except ChannelsTooMuchError:
+        LOGS.info("انضم بجروب السورس  اولا @FTTUTT0")
+    except ChannelPrivateError:
+        LOGS.critical(
+            "تم حظرك من استخدام سورس سيمو  عليك الأعتذار الى مطور السورس @FTTUTT1"
         )
-        await sbb_b.edit_folder("@mwowoqujsosibot", folder=1)  # عمل ارشيف للبوت
-        channel_usernames = ["jmthon", "RR7PP", "thejmthon"]
-        for channel_username in channel_usernames:
-            try:
-                channel = await sbb_b.get_entity(channel_username)
-                await sbb_b(JoinChannelRequest(channel=channel))
-                await forjmdev(channel)
-            except Exception as e:
-                print(f"{e}")
+    try:
+        await sbb_b(JoinChannelRequest("@FTTUTT1"))
+    except BaseException:
+        pass
+    try:
+        await sbb_b(JoinChannelRequest("@FTTUTY"))
+    except BaseException:
+        pass
+    try:
+        await sbb_b(JoinChannelRequest("@FTTUTT1"))
+    except BaseException:
+        pass
+    try:
+        await sbb_b(JoinChannelRequest("@GTTUTT"))
     except BaseException:
         pass
 
-
 async def mybot():
-    sbb_b_USER = sbb_b.me.first_name
+    SBB_B_USER = sbb_b.me.first_name
     The_razan = sbb_b.uid
-    rz_ment = f"[{sbb_b_USER}](tg://user?id={The_razan})"
+    rz_ment = f"[{SBB_B_USER}](tg://user?id={The_razan})"
     f"ـ {rz_ment}"
     f"⪼ هذا هو بوت خاص بـ {rz_ment} يمكنك التواصل معه هنا"
     starkbot = await sbb_b.tgbot.get_me()
-    perf = "[ سيمو ]"
+    perf = "[ بوت سيمو ]"
     bot_name = starkbot.first_name
     botname = f"@{starkbot.username}"
     if bot_name.endswith("Assistant"):
         print("تم تشغيل البوت")
     else:
         try:
-            await sbb_b.send_message("@mwowoqujsosibot", "/start")
-            await asyncio.sleep(1)
-            await sbb_b.send_message(
-                "@mwowoqujsosibot",
-                "تم بنجاح تشغيل سورس سيمو عزيزي المستخدم هذا البوت سيتم تشغيله قريبا بعد اكماله",
-            )
-            await asyncio.sleep(1)
             await sbb_b.send_message("@BotFather", "/setinline")
             await asyncio.sleep(1)
             await sbb_b.send_message("@BotFather", botname)
@@ -140,30 +121,19 @@ async def mybot():
 
 
 async def startupmessage():
-    if not gvarstatus("DEPLOY"):
-        try:
-            if BOTLOG:
-                await sbb_b.tgbot.send_file(
-                    BOTLOG_CHATID,
-                    "https://graph.org//file/c20c4f492da1811e1bef0.jpg",
-                    caption="**شكرا لتنصيبك سورس سيمو**\n • هنا بعض الملاحظات التي يجب ان تعرفها عن استخدامك لسورس سيمو.",
-                    buttons=[(Button.inline("اضغط هنا", data="initft_2"),)],
-                )
-                addgvar("DEPLOY", "Done")
-        except Exception as e:
-            LOGS.error(e)
-    else:
-        try:
-            if BOTLOG:
-                await sbb_b.tgbot.send_message(
-                    BOTLOG_CHATID,
-                    "**لقد تم بنجاح تنصيب سورس سيمو **\n➖➖➖➖➖➖➖➖➖➖\n**السورس**: @jmthon\n**المطور**: @R0R77\n➖➖➖➖➖➖➖➖➖➖\n**مجموعة الدعم**: @jmthon_support\n➖➖➖➖➖➖➖➖➖➖",
-                    buttons=[
-                        (Button.url("كروب المساعدة", "https://t.me/jmthon_support"),)
-                    ],
-                )
-        except Exception as e:
-            LOGS.error(e)
+    """
+    رسالة التشغيل
+    """
+    try:
+        if BOTLOG:
+            Config.JMTHONLOGO = await sbb_b.tgbot.send_file(
+                BOTLOG_CHATID,
+                "https://telegra.ph/file/1d033934ba8ab84145760.jpg",
+                caption="᯽︙ بــوت سيمو يـعـمـل بـنـجـاح  **\n\n**᯽︙ ارسل `.الاوامر` لرؤية اوامر السورس**\n\n**᯽︙ تـحـيـاتـي الـمـبـرمـجہ سـمـيـر",
+                buttons=[(Button.url("الـمـبـرمـجہ سـمـيـر", "https://t.me/DEV_SAMIR"),)],
+            )
+    except Exception as e:
+        LOGS.error(e)
         return None
     try:
         msg_details = list(get_item_collectionlist("restart_update"))
@@ -189,44 +159,6 @@ async def startupmessage():
     except Exception as e:
         LOGS.error(e)
         return None
-
-
-@sbb_b.tgbot.on(CallbackQuery(data=re.compile(b"initft_(\\d+)")))
-async def deploy(e):
-    CURRENT = int(e.data_match.group(1))
-    if CURRENT == 5:
-        return await e.edit(
-            STRINGS[5],
-            buttons=[Button.inline("<< رجوع", data="initbk_4")],
-            link_preview=False,
-        )
-    await e.edit(
-        STRINGS[CURRENT],
-        buttons=[
-            Button.inline("<<", data=f"initbk_{str(CURRENT - 1)}"),
-            Button.inline(">>", data=f"initft_{str(CURRENT + 1)}"),
-        ],
-        link_preview=False,
-    )
-
-
-@sbb_b.tgbot.on(CallbackQuery(data=re.compile(b"initbk_(\\d+)")))
-async def ineiq(e):
-    CURRENT = int(e.data_match.group(1))
-    if CURRENT == 1:
-        return await e.edit(
-            STRINGS[1],
-            buttons=[Button.inline("اضغط للبدأ >>", data="initft_2")],
-            link_preview=False,
-        )
-    await e.edit(
-        STRINGS[CURRENT],
-        buttons=[
-            Button.inline("<<", data=f"initbk_{str(CURRENT - 1)}"),
-            Button.inline(">>", data=f"initft_{str(CURRENT + 1)}"),
-        ],
-        link_preview=False,
-    )
 
 
 async def add_bot_to_logger_group(chat_id):
@@ -341,7 +273,7 @@ async def verifyLoggerGroup():
         descript = "⪼ هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا  𓆰."
         photobt = await sbb_b.upload_file(file="razan/pic/samir2.jpg")
         _, groupid = await create_supergroup(
-            "كروب بوت سيمو", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
+            "مجموعة إشعارات سيمو ", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print("تم انشاء كروب الحفظ بنجاح")
@@ -366,7 +298,7 @@ async def verifyLoggerGroup():
         descript = "❃ لا تحذف او تغادر المجموعه وظيفتها حفظ رسائل التي تأتي على الخاص"
         photobt = await sbb_b.upload_file(file="razan/pic/samir1.jpg")
         _, groupid = await create_supergroup(
-            "مجموعة التخزين", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
+            "مجموعة تخزين سيمو ", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PM_LOGGER_GROUP_ID", groupid)
         print("تم عمل الكروب التخزين بنجاح واضافة الفارات اليه.")
