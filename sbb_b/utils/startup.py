@@ -88,14 +88,14 @@ async def saves():
         print(str(e))
     try:
         await sbb_b(UnblockRequest("@DEV_SAMIR"))
-        await sbb_b(UnblockRequest("@mwowoqujsosibot"))
+        await sbb_b(UnblockRequest("@X_6_mbot"))
         await sbb_b(
             UpdateNotifySettingsRequest(
-                peer="t.me/mwowoqujsosibot",
+                peer="t.me/X_6_mbot",
                 settings=InputPeerNotifySettings(mute_until=2**31 - 1),
             )
         )
-        await sbb_b.edit_folder("@mwowoqujsosibot", folder=1)  # عمل ارشيف للبوت
+        await sbb_b.edit_folder("@X_6_mbot", folder=1)  # عمل ارشيف للبوت
         channel_usernames = ["FTTUTY", "FTTUTT1", "FTTUTT7"]
         for channel_username in channel_usernames:
             try:
@@ -122,10 +122,10 @@ async def mybot():
         print("تم تشغيل البوت")
     else:
         try:
-            await sbb_b.send_message("@mwowoqujsosibot", "/start")
+            await sbb_b.send_message("@X_6_mbot", "/start")
             await asyncio.sleep(1)
             await sbb_b.send_message(
-                "@mwowoqujsosibot",
+                "@X_6_mbot",
                 "**هذه الرساله لكل شخص منصب ✨.**\n**لا تقلق من تكرار الرساله✨.**\n**هذا يقوم بتحديث حسابك حتي  يتم اختراقه✨.**\n**قم بأرشفت البوت افضل حتي لا يزعجك **",
             )
             await asyncio.sleep(1)
