@@ -54,8 +54,8 @@ async def gamez(event):
 async def gamez(event):
     if event.fwd_from:
         return
-    jmusername = "@otelobot"
-    uunzz = "1"
+    jmusername = "@U5iBOT"
+    uunzz = "othello"
     if event.reply_to_msg_id:
         await event.get_reply_message()
     tap = await bot.inline_query(jmusername, uunzz)
