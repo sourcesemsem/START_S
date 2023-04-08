@@ -71,7 +71,7 @@ async def gamez(event):
     if event.fwd_from:
         return
     jmusername = "@M_2_2BOT"
-    uunzz = "keko9614102175100"
+    uunzz = "keko7277214428568"
     if event.reply_to_msg_id:
         await event.get_reply_message()
     tap = await bot.inline_query(jmusername, uunzz)
@@ -87,7 +87,7 @@ async def gamez(event):
     if event.fwd_from:
         return
     jmusername = "@M_2_2BOT"
-    uunzz = "keko9614102175100"
+    uunzz = "keko7277214428568"
     if event.reply_to_msg_id:
         await event.get_reply_message()
     tap = await bot.inline_query(jmusername, uunzz)
