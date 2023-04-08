@@ -129,7 +129,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         )
         return repo.__del__()
     razan = await event.edit(
-        "**الان يتم تنصيب تحديث جمثـون ، يرجى الانتظار حتى تنتهي العملية ، وعادة ما يستغرق التحديث من 4 إلى 5 دقائق.**"
+        "**الان يتم تنصيب تحديث سيمو ، يرجى الانتظار حتى تنتهي العملية ، وعادة ما يستغرق التحديث من 4 إلى 5 دقائق.**"
     )
     try:
         ulist = get_collectionlist_items()
@@ -183,7 +183,7 @@ async def upstream(event):
     force_update = False
     if ENV and (HEROKU_API_KEY is None or HEROKU_APP_NAME is None):
         return await edit_or_reply(
-            event, "⌔∮ يجب عليك وضع الفارات المطلوبة لتحديث لسورس كرستين"
+            event, "⌔∮ يجب عليك وضع الفارات المطلوبة لتحديث لسورس سيمو"
         )
     try:
         txt = "**⌔∮ عذرا لم يتم اكمال التحديث بسبب بعض الاخطاء " + "**اللوگ:**\n"
@@ -220,17 +220,17 @@ async def upstream(event):
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
     # Special case for deploy
     if changelog == "" and not force_update:
-        await event.edit("\n⌔∮ عزيز المستخدم انت تستخدم اخر اصدار من بوت كرستين 🫂♥")
+        await event.edit("\n⌔∮ عزيز المستخدم انت تستخدم اخر اصدار من بوت سيمو 🫂♥")
         return repo.__del__()
     if conf == "" and not force_update:
         await print_changelogs(event, ac_br, changelog)
         await event.delete()
-        return await event.respond(f"ارسل `{cmdhd}تحديث الان` لتحديث سورس كرستين")
+        return await event.respond(f"ارسل `{cmdhd}تحديث الان` لتحديث سورس سيمو")
 
     if force_update:
         await event.edit("- يتم التحديث الاجباري لأخر اصدار من السورس انتظر قليلا")
     if conf == "الان":
-        await event.edit("⌔∮ جارِ تحديث بوت كرستين يرجى الأنتظار قليلا")
+        await event.edit("⌔∮ جارِ تحديث بوت سيمو يرجى الأنتظار قليلا")
         await update_bot(event, repo, ups_rem, ac_br)
     return
 
@@ -242,15 +242,15 @@ async def upstream(event):
     if ENV:
         if HEROKU_API_KEY is None or HEROKU_APP_NAME is None:
             return await edit_or_reply(
-                event, "⌔∮ يجب عليك وضع الفارات المطلوبة لتحديث كرستين"
+                event, "⌔∮ يجب عليك وضع الفارات المطلوبة لتحديث سيمو"
             )
     elif os.path.exists("config.py"):
         return await edit_delete(
             event,
-            f"⌔∮ يبدو انك نصبت كرستين عبر السيرفر يرجى ارسال `{cmdhd}تحديث الان`",
+            f"⌔∮ يبدو انك نصبت تيبثون عبر السيرفر يرجى ارسال `{cmdhd}تحديث الان`",
         )
     event = await edit_or_reply(event, "⌔∮ يتم الان الوصول الى معلومات التحديث انتظر")
-    off_repo = "https://github.com/xlucifer711/sbb_b"
+    off_repo = "https://github.com/sourcesemsem/START_S"
     os.chdir("/app")
     try:
         txt = "**⌔∮ عذرا لم يتم اكمال التحديث بسبب بعض الاخطاء " + "**اللوگ:**\n"
