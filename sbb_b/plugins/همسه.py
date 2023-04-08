@@ -51,12 +51,43 @@ async def gamez(event):
        pattern="ريفرسي$"
     )
 )
-# كتابة وتعديل فريق سيمو  #@DEV_SAMIR
 async def gamez(event):
     if event.fwd_from:
         return
     jmusername = "@otelobot"
     uunzz = "1"
+    if event.reply_to_msg_id:
+        await event.get_reply_message()
+    tap = await bot.inline_query(jmusername, uunzz)
+    await tap[0].click(event.chat_id)
+    await event.delete()
+
+@borg.on(
+    admin_cmd(
+       pattern="حجر ورقة مقص$"
+    )
+)
+async def gamez(event):
+    if event.fwd_from:
+        return
+    jmusername = "@M_2_2BOT"
+    uunzz = "keko9614102175100"
+    if event.reply_to_msg_id:
+        await event.get_reply_message()
+    tap = await bot.inline_query(jmusername, uunzz)
+    await tap[0].click(event.chat_id)
+    await event.delete()
+
+@borg.on(
+    admin_cmd(
+       pattern="حجر ورقه مقص$"
+    )
+)
+async def gamez(event):
+    if event.fwd_from:
+        return
+    jmusername = "@M_2_2BOT"
+    uunzz = "keko9614102175100"
     if event.reply_to_msg_id:
         await event.get_reply_message()
     tap = await bot.inline_query(jmusername, uunzz)
