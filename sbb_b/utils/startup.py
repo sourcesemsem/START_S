@@ -1,23 +1,16 @@
 import asyncio
 import glob
 import os
-import re
 import sys
 import urllib.request
 from datetime import timedelta
 from pathlib import Path
 
 from telethon import Button, functions, types, utils
-from telethon.events import CallbackQuery
-from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.tl.functions.channels import JoinChannelRequest
-from telethon.tl.functions.contacts import UnblockRequest
-from telethon.tl.functions.messages import GetMessagesViewsRequest
-from telethon.tl.types import InputPeerNotifySettings
+from telethon.errors import BotMethodInvalidError, ChannelPrivateError, ChannelsTooMuchError
 
 from sbb_b import BOTLOG, BOTLOG_CHATID, PM_LOGGER_GROUP_ID
-from razan.CMD.utils import *
-
 from ..Config import Config
 from ..core.logger import logging
 from ..core.session import sbb_b
@@ -69,54 +62,48 @@ async def setup_bot():
         sys.exit()
 
 
-async def forjmdev(thchannel):
-    try:
-        channel = await sbb_b.get_entity(thchannel)
-        messages = await sbb_b.get_messages(channel, limit=5)
-        message_ids = [msg.id for msg in messages]
-        await sbb_b(GetMessagesViewsRequest(peer=channel, id=message_ids))
-    except Exception as e:
-        print(f"{e}")
-
-
 async def saves():
     try:
         os.environ[
             "STRING_SESSION"
-        ] = "⎙ :: انتبه عزيزي المستخدم هذا الملف ملغم يمكنه اختراق حسابك لم يتم تنصيبه في حسابك لا تقلق  𓆰."
+        ] = "**⎙ :: انتبه عزيزي المستخدم هذا الملف ملغم يمكنه اختراق حسابك لم يتم تنصيبه في حسابك لا تقلق  𓆰.**"
     except Exception as e:
         print(str(e))
     try:
-        await sbb_b(UnblockRequest("@DEV_SAMIR"))
-        await sbb_b(UnblockRequest("@X_6_mbot"))
-        await sbb_b(
-            UpdateNotifySettingsRequest(
-                peer="t.me/X_6_mbot",
-                settings=InputPeerNotifySettings(mute_until=2**31 - 1),
-            )
+        await sbb_b(JoinChannelRequest("@FTTUTT1"))
+    except BotMethodInvalidError:
+        pass
+    except ChannelsTooMuchError:
+        LOGS.info("انضم بجروب السورس  اولا @FTTUTT0")
+    except ChannelPrivateError:
+        LOGS.critical(
+            "تم حظرك من استخدام سورس سيمو  عليك الأعتذار الى مطور السورس @FTTUTT1"
         )
-        await sbb_b.edit_folder("@X_6_mbot", folder=1)  # عمل ارشيف للبوت
-        channel_usernames = ["FTTUTY", "FTTUTT1", "FTTUTT7"]
-        for channel_username in channel_usernames:
-            try:
-                channel = await sbb_b.get_entity(channel_username)
-                await sbb_b(JoinChannelRequest(channel=channel))
-                await forjmdev(channel)
-            except Exception as e:
-                print(f"{e}")
+    try:
+        await sbb_b(JoinChannelRequest("@FTTUTT1"))
+    except BaseException:
+        pass
+    try:
+        await sbb_b(JoinChannelRequest("@FTTUTY"))
+    except BaseException:
+        pass
+    try:
+        await sbb_b(JoinChannelRequest("@FTTUTT1"))
+    except BaseException:
+        pass
+    try:
+        await sbb_b(JoinChannelRequest("@GTTUTT"))
     except BaseException:
         pass
 
-
 async def mybot():
-    sbb_b_USER = sbb_b.me.first_name
+    SBB_B_USER = sbb_b.me.first_name
     The_razan = sbb_b.uid
-    rz_ment = f"[{sbb_b_USER}](tg://user?id={The_razan})"
-
-f"ـ {rz_ment}"
+    rz_ment = f"[{SBB_B_USER}](tg://user?id={The_razan})"
+    f"ـ {rz_ment}"
     f"⪼ هذا هو بوت خاص بـ {rz_ment} يمكنك التواصل معه هنا"
     starkbot = await sbb_b.tgbot.get_me()
-    perf = "[ سيمو ]"
+    perf = "[ بوت سيمو ]"
     bot_name = starkbot.first_name
     botname = f"@{starkbot.username}"
     if bot_name.endswith("Assistant"):
@@ -134,29 +121,19 @@ f"ـ {rz_ment}"
 
 
 async def startupmessage():
-    if not gvarstatus("DEPLOY"):
-        try:
-            if BOTLOG:
-                await sbb_b.tgbot.send_file(
-                    BOTLOG_CHATID,
-                    "https://telegra.ph/file/25feab52ad4307a565915.jpg",
-                    caption="شكرا لتنصيبك سورس سيمو\n • هنا بعض الملاحظات التي يجب ان تعرفها عن استخدامك لسورس سيمو.",
-                    buttons=[(Button.inline("اضغط هنا", data="initft_2"),)],
-                )
-                addgvar("DEPLOY", "Done")
-        except Exception as e:
-            LOGS.error(e)
-    else:
-        try:
-            if BOTLOG:
-                await sbb_b.tgbot.send_file(
+    """
+    رسالة التشغيل
+    """
+    try:
+        if BOTLOG:
+            Config.JMTHONLOGO = await sbb_b.tgbot.send_file(
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/1d033934ba8ab84145760.jpg",
-                caption="᯽︙ بــوت سيمو يـعـمـل بـنـجـاح  \n\n᯽︙ ارسل .الاوامر لرؤية اوامر السورس\n\n᯽︙ تـحـيـاتـي الـمـبـرمـجہ سـمـيـر",
+                caption="᯽︙ بــوت سيمو يـعـمـل بـنـجـاح  **\n\n**᯽︙ ارسل `.الاوامر` لرؤية اوامر السورس**\n\n**᯽︙ تـحـيـاتـي الـمـبـرمـجہ سـمـيـر",
                 buttons=[(Button.url("الـمـبـرمـجہ سـمـيـر", "https://t.me/DEV_SAMIR"),)],
-                )
-        except Exception as e:
-            LOGS.error(e)
+            )
+    except Exception as e:
+        LOGS.error(e)
         return None
     try:
         msg_details = list(get_item_collectionlist("restart_update"))
@@ -169,7 +146,7 @@ async def startupmessage():
         if msg_details:
             await sbb_b.check_testcases()
             message = await sbb_b.get_messages(msg_details[0], ids=msg_details[1])
-            text = message.text + "\n\nالان السورس شغال طبيعي."
+            text = message.text + "\n\n**الان السورس شغال طبيعي.**"
             await sbb_b.edit_message(msg_details[0], msg_details[1], text)
             if gvarstatus("restartupdate") is not None:
                 await sbb_b.send_message(
@@ -184,47 +161,8 @@ async def startupmessage():
         return None
 
 
-@sbb_b.tgbot.on(CallbackQuery(data=re.compile(b"initft_(\\d+)")))
-async def deploy(e):
-    CURRENT = int(e.data_match.group(1))
-    if CURRENT == 5:
-        return await e.edit(
-            STRINGS[5],
-            buttons=[Button.inline("<< رجوع", data="initbk_4")],
-            link_preview=False,
-        )
-    await e.edit(
-        STRINGS[CURRENT],
-        buttons=[
-            Button.inline("<<", data=f"initbk_{str(CURRENT - 1)}"),
-            Button.inline(">>", data=f"initft_{str(CURRENT + 1)}"),
-        ],
-        link_preview=False,
-    )
-
-
-@sbb_b.tgbot.on(CallbackQuery(data=re.compile(b"initbk_(\\d+)")))
-async def ineiq(e):
-    CURRENT = int(e.data_match.group(1))
-    if CURRENT == 1:
-        return await e.edit(
-            STRINGS[1],
-            buttons=[Button.inline("اضغط للبدأ >>", data="initft_2")],
-            link_preview=False,
-        )
-    await e.edit(
-        STRINGS[CURRENT],
-        buttons=[
-            Button.inline("<<", data=f"initbk_{str(CURRENT - 1)}"),
-            Button.inline(">>", data=f"initft_{str(CURRENT + 1)}"),
-        ],
-        link_preview=False,
-    )
-
-
 async def add_bot_to_logger_group(chat_id):
-
-"""
+    """
     اضافة البوت للكروبات
     """
     bot_details = await sbb_b.tgbot.get_me()
@@ -304,7 +242,7 @@ async def load_plugins(folder, extfolder=None):
             failure.append("None")
         await sbb_b.tgbot.send_message(
             BOTLOG_CHATID,
-            f'- تم بنجاح استدعاء الاوامر الاضافيه \nعدد الملفات التي استدعيت: {success}\nفشل في استدعاء : {", ".join(failure)}',
+            f'- تم بنجاح استدعاء الاوامر الاضافيه \n**عدد الملفات التي استدعيت:** `{success}`\n**فشل في استدعاء :** `{", ".join(failure)}`',
         )
 
 
@@ -333,10 +271,9 @@ async def verifyLoggerGroup():
             LOGS.error("هنالك خطا ما للتعرف على فار كروب الحفظ\n" + str(e))
     else:
         descript = "⪼ هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا  𓆰."
-
-photobt = await sbb_b.upload_file(file="razan/pic/samir2.jpg")
+        photobt = await sbb_b.upload_file(file="razan/pic/samir2.jpg")
         _, groupid = await create_supergroup(
-            "مجموعة الاشعارات", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
+            "مجموعة إشعارات سيمو ", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print("تم انشاء كروب الحفظ بنجاح")
@@ -361,7 +298,7 @@ photobt = await sbb_b.upload_file(file="razan/pic/samir2.jpg")
         descript = "❃ لا تحذف او تغادر المجموعه وظيفتها حفظ رسائل التي تأتي على الخاص"
         photobt = await sbb_b.upload_file(file="razan/pic/samir1.jpg")
         _, groupid = await create_supergroup(
-            "مجموعة التخزين", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
+            "مجموعة تخزين سيمو ", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PM_LOGGER_GROUP_ID", groupid)
         print("تم عمل الكروب التخزين بنجاح واضافة الفارات اليه.")
@@ -379,11 +316,11 @@ async def install_externalrepo(repo, branch, cfolder):
     if JMTHONBRANCH := branch:
         repourl = os.path.join(JMTHONREPO, f"tree/{JMTHONBRANCH}")
         gcmd = f"git clone -b {JMTHONBRANCH} {JMTHONREPO} {cfolder}"
-        errtext = f"لا يوحد فرع بأسم {JMTHONBRANCH} في الريبو الخارجي {JMTHONREPO}. تاكد من اسم الفرع عبر فار (EXTERNAL_REPO_BRANCH)"
+        errtext = f"لا يوحد فرع بأسم `{JMTHONBRANCH}` في الريبو الخارجي {JMTHONREPO}. تاكد من اسم الفرع عبر فار (`EXTERNAL_REPO_BRANCH`)"
     else:
         repourl = JMTHONREPO
         gcmd = f"git clone {JMTHONREPO} {cfolder}"
-        errtext = f"الرابط ({JMTHONREPO}) الذي وضعته لفار EXTERNAL_REPO غير صحيح عليك وضع رابط صحيح"
+        errtext = f"الرابط ({JMTHONREPO}) الذي وضعته لفار `EXTERNAL_REPO` غير صحيح عليك وضع رابط صحيح"
     response = urllib.request.urlopen(repourl)
     if response.code != 200:
         LOGS.error(errtext)
