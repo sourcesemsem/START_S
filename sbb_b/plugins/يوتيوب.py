@@ -306,7 +306,7 @@ async def insta_dl(event):
             event, "**❃ عذرا هذه الميزه للتحميل من الانستجرام فقط**", 10
         )
     
-    v1 = "@IgGramBot"
+    v1 = "@SEMO41SBOT"
     v2 = "@videomaniacbot"
     media_list = []
     jmthonevent = await edit_or_reply(event, "**⪼ جار التحميل انتظر قليلا**")
