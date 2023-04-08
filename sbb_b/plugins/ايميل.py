@@ -32,7 +32,7 @@ plugin_category = "البوت"
 @sbb_b.ar_cmd(pattern="بريد$")
 async def zelzal_gpt(event):
     chat = "@TeMail_Robot" # code by t.me/zzzzl1l
-    zed = await edit_or_reply(event, "**⎉╎جـار إنشـاء ايميـل وهمـي 📧...**")
+    zed = await edit_or_reply(event, "**◉╎جـار إنشـاء ايميـل وهمـي 📧...**")
     async with borg.conversation(chat) as conv: # code by t.me/zzzzl1l
         try:
             await conv.send_message("/start")
@@ -54,7 +54,7 @@ async def zelzal_gpt(event):
             zedthon = await conv.get_response()
             malath = zedthon.text
             if "📧 Your temporary email" in zedthon.text:
-                aa = malath.replace("📧 Your temporary email address:", "**⎉╎تم انشـاء Email وهمـي بنجـاح ☑️\n⎉╎الايميـل الوهمـي الخـاص بك هـو 📧 :**") 
+                aa = malath.replace("📧 Your temporary email address:", "**◉╎تم انشـاء Email وهمـي بنجـاح ☑️\n◉╎الايميـل الوهمـي الخـاص بك هـو 📧 :**") 
                 await zed.delete()
                 await borg.send_message(event.chat_id, aa)
 
@@ -64,7 +64,7 @@ async def zelzal_gpt(event):
 @sbb_b.ar_cmd(pattern="الوارد$")
 async def zelzal_gpt(event):
     chat = "@TeMail_Robot" # code by t.me/zzzzl1l
-    zed = await edit_or_reply(event, "**⎉╎جـار جلب رسائـل البريـد 📬...**")
+    zed = await edit_or_reply(event, "**◉╎جـار جلب رسائـل البريـد 📬...**")
     async with borg.conversation(chat) as conv: # code by t.me/zzzzl1l
         try:
             await conv.send_message("/start")
@@ -74,14 +74,14 @@ async def zelzal_gpt(event):
             zedthon = await conv.get_response()
             malath = zedthon.text
             if "❌ No OTP" in zedthon.text:
-                aa = malath.replace("❌ No OTP were received...", "**⎉╎لا يوجـد رسـالة واردة لبريـدك الوهمـي بعـد 📭❌**") 
+                aa = malath.replace("❌ No OTP were received...", "**◉╎لا يوجـد رسـالة واردة لبريـدك الوهمـي بعـد 📭❌**") 
                 await zed.delete()
                 return await borg.send_message(event.chat_id, aa)
             if "📬 Inbox" in zedthon.text:
                 await zed.delete()
-                return await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس سيمو**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tcr • البـريد الـوارد")
+                return await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس سيمو**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tsemo • البـريد الـوارد")
             await zed.delete()
-            await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس سيمو**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tcr • البـريد الـوارد")
+            await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس سيمو**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tsemo • البـريد الـوارد")
         except YouBlockedUserError:
             await sbb_b(unblock("TeMail_Robot"))
             await conv.send_message("/start")
@@ -91,11 +91,11 @@ async def zelzal_gpt(event):
             zedthon = await conv.get_response()
             malath = zedthon.text
             if "❌ No OTP" in zedthon.text:
-                aa = malath.replace("❌ No OTP were received...", "**⎉╎لا يوجـد رسـالة واردة لبريـدك الوهمـي بعـد 📭❌**") 
+                aa = malath.replace("❌ No OTP were received...", "**◉╎لا يوجـد رسـالة واردة لبريـدك الوهمـي بعـد 📭❌**") 
                 await zed.delete()
                 return await borg.send_message(event.chat_id, aa)
             if "📬 Inbox" in zedthon.text:
                 await zed.delete()
-                return await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس سيمو**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tcr • البـريد الـوارد")
+                return await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس سيمو**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tsemo • البـريد الـوارد")
             await zed.delete()
-            await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس سيمو**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tcr • البـريد الـوارد")
+            await borg.send_message(event.chat_id, f"**{malath}**\n\n───────────────────\nسۅٛࢪس سيمو**تليثون** 𝗧**ᴏᴏʟꜱ**\n\t\t\t\t\t\t\t\tsemo • البـريد الـوارد")
