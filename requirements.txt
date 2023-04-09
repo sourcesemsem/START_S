@@ -75,6 +75,7 @@ wand
 wikipedia
 ujson
 yt_dlp
+git+https://github.com/pytgcalls/pytgcalls
 
 git+https://github.com/alexmercerind/youtube-search-python
 git+https://github.com/buddhhu/img2html.git
