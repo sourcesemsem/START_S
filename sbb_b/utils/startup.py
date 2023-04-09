@@ -151,7 +151,7 @@ async def startupmessage():
             if BOTLOG:
                 await sbb_b.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/1d033934ba8ab84145760.jpg",
+                "https://telegra.ph/file/25feab52ad4307a565915.jpg",
                 caption="᯽︙ بــوت سيمو يـعـمـل بـنـجـاح  \n\n᯽︙ ارسل .الاوامر لرؤية اوامر السورس\n\n᯽︙ تـحـيـاتـي الـمـبـرمـجہ سـمـيـر",
                 buttons=[(Button.url("الـمـبـرمـجہ سـمـيـر", "https://t.me/DEV_SAMIR"),)],
                 )
