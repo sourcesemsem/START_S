@@ -7,7 +7,7 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import AudioVideoPiped, AudioPiped
 from pytgcalls.types.input_stream.quality import HighQualityAudio
 from pytgcalls.types.input_stream.quality import HighQualityVideo
-from sbb_b import sbb_b
+from sbb_b import zedub
 
 from ..Config import Config
 from telethon.sessions import StringSession
@@ -15,13 +15,13 @@ from telethon.sessions import StringSession
 import asyncio
 LOGS = logging.getLogger(__name__)
 
-new_sbb_b = TelegramClient(StringSession(Config.STRING_SESSION), Config.APP_ID, Config.API_HASH)
+new_sbb_b= TelegramClient(StringSession(Config.STRING_SESSION), Config.APP_ID, Config.API_HASH)
 
 async def PyStart():
     global zedub_py
     try:
-        await new_sbb_b.start()
-        zedub_py = PyTgCalls(new_sbb_b)
+        await new_zedub.start()
+        zedub_py = PyTgCalls(new_zedub)
         await zedub_py.start()
     except Exception as error:
         print (error)
