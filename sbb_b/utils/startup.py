@@ -66,7 +66,7 @@ async def saves():
     try:
         os.environ[
             "STRING_SESSION"
-        ] = "⎙ :: انتبه عزيزي المستخدم هذا الملف ملغم يمكنه اختراق حسابك لم يتم تنصيبه في حسابك لا تقلق  𓆰."
+        ] = "**⎙ :: انتبه عزيزي المستخدم هذا الملف ملغم يمكنه اختراق حسابك لم يتم تنصيبه في حسابك لا تقلق  𓆰.**"
     except Exception as e:
         print(str(e))
     try:
@@ -119,6 +119,7 @@ async def mybot():
         except Exception as e:
             print(e)
 
+
 async def startupmessage():
     """
     رسالة التشغيل
@@ -128,7 +129,7 @@ async def startupmessage():
             Config.JMTHONLOGO = await sbb_b.tgbot.send_file(
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/1d033934ba8ab84145760.jpg",
-                caption="᯽︙ بــوت سيمو يـعـمـل بـنـجـاح  \n\n᯽︙ ارسل .الاوامر لرؤية اوامر السورس\n\n᯽︙ تـحـيـاتـي الـمـبـرمـجہ سـمـيـر",
+                caption="᯽︙ بــوت سيمو يـعـمـل بـنـجـاح  **\n\n**᯽︙ ارسل `.الاوامر` لرؤية اوامر السورس**\n\n**᯽︙ تـحـيـاتـي الـمـبـرمـجہ سـمـيـر",
                 buttons=[(Button.url("الـمـبـرمـجہ سـمـيـر", "https://t.me/DEV_SAMIR"),)],
             )
     except Exception as e:
@@ -145,7 +146,7 @@ async def startupmessage():
         if msg_details:
             await sbb_b.check_testcases()
             message = await sbb_b.get_messages(msg_details[0], ids=msg_details[1])
-            text = message.text + "\n\nالان السورس شغال طبيعي."
+            text = message.text + "\n\n**الان السورس شغال طبيعي.**"
             await sbb_b.edit_message(msg_details[0], msg_details[1], text)
             if gvarstatus("restartupdate") is not None:
                 await sbb_b.send_message(
@@ -231,8 +232,7 @@ async def load_plugins(folder, extfolder=None):
                     os.remove(Path(f"{plugin_path}/{shortname}.py"))
             except Exception as e:
                 if shortname not in failure:
-
-failure.append(shortname)
+                    failure.append(shortname)
                 os.remove(Path(f"{plugin_path}/{shortname}.py"))
                 LOGS.info(
                     f"لم يتم تحميل {shortname} بسبب خطأ {e}\nمسار الملف {plugin_path}"
@@ -242,7 +242,7 @@ failure.append(shortname)
             failure.append("None")
         await sbb_b.tgbot.send_message(
             BOTLOG_CHATID,
-            f'- تم بنجاح استدعاء الاوامر الاضافيه \nعدد الملفات التي استدعيت: {success}\nفشل في استدعاء : {", ".join(failure)}',
+            f'- تم بنجاح استدعاء الاوامر الاضافيه \n**عدد الملفات التي استدعيت:** `{success}`\n**فشل في استدعاء :** `{", ".join(failure)}`',
         )
 
 
@@ -316,12 +316,11 @@ async def install_externalrepo(repo, branch, cfolder):
     if JMTHONBRANCH := branch:
         repourl = os.path.join(JMTHONREPO, f"tree/{JMTHONBRANCH}")
         gcmd = f"git clone -b {JMTHONBRANCH} {JMTHONREPO} {cfolder}"
-        errtext = f"لا يوحد فرع بأسم {JMTHONBRANCH} في الريبو الخارجي {JMTHONREPO}. تاكد من اسم الفرع عبر فار (EXTERNAL_REPO_BRANCH)"
-
-else:
+        errtext = f"لا يوحد فرع بأسم `{JMTHONBRANCH}` في الريبو الخارجي {JMTHONREPO}. تاكد من اسم الفرع عبر فار (`EXTERNAL_REPO_BRANCH`)"
+    else:
         repourl = JMTHONREPO
         gcmd = f"git clone {JMTHONREPO} {cfolder}"
-        errtext = f"الرابط ({JMTHONREPO}) الذي وضعته لفار EXTERNAL_REPO غير صحيح عليك وضع رابط صحيح"
+        errtext = f"الرابط ({JMTHONREPO}) الذي وضعته لفار `EXTERNAL_REPO` غير صحيح عليك وضع رابط صحيح"
     response = urllib.request.urlopen(repourl)
     if response.code != 200:
         LOGS.error(errtext)
