@@ -18,18 +18,18 @@ LOGS = logging.getLogger(__name__)
 new_sbb_b = TelegramClient(StringSession(Config.STRING_SESSION), Config.APP_ID, Config.API_HASH)
 
 async def PyStart():
-    global sbb_b_py
+    global zedub_py
     try:
         await new_sbb_b.start()
-        sbb_b_py = PyTgCalls(new_sbb_b)
-        await sbb_b_py.start()
+        zedub_py = PyTgCalls(new_sbb_b)
+        await zedub_py.start()
     except Exception as error:
         print (error)
 
 async def JoinThenStreamVideo(chat_id, StreamFile):
-    global sbb_b_py
+    global zedub_py
     await PyStart()
-    await sbb_b_py.join_group_call(
+    await zedub_py.join_group_call(
         int(chat_id),
         AudioVideoPiped(
             StreamFile,
@@ -41,9 +41,9 @@ async def JoinThenStreamVideo(chat_id, StreamFile):
     await idle()
     
 async def JoinThenStreamAudio(chat_id, StreamFile):
-    global sbb_b_py
+    global zedub_py
     await PyStart()
-    await sbb_b_py.join_group_call(
+    await zedub_py.join_group_call(
         int(chat_id),
         AudioPiped(
             StreamFile,
@@ -54,8 +54,8 @@ async def JoinThenStreamAudio(chat_id, StreamFile):
     await idle()
     
 async def LeaveStream(chat_id):
-    global sbb_b_py
-    await sbb_b_py.leave_group_call(
+    global zedub_py
+    await zedub_py.leave_group_call(
         chat_id,
     )
 
