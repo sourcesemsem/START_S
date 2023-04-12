@@ -1,12 +1,12 @@
 from sbb_b.core.logger import logging
 from telethon import TelegramClient, client, events
 
-from pytgcalls import idle
-from pytgcalls import PyTgCalls
-from pytgcalls import StreamType
-from pytgcalls.types.input_stream import AudioVideoPiped, AudioPiped
-from pytgcalls.types.input_stream.quality import HighQualityAudio
-from pytgcalls.types.input_stream.quality import HighQualityVideo
+from telethon import idle
+from telethon import PyTgCalls
+from telethon import StreamType
+from telethon.types.input_stream import AudioVideoPiped, AudioPiped
+from telethon.types.input_stream.quality import HighQualityAudio
+from telethon.types.input_stream.quality import HighQualityVideo
 from sbb_b import sbb_b
 
 from ..Config import Config
