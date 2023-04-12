@@ -93,3 +93,19 @@ async def gamez(event):
     tap = await bot.inline_query(jmusername, uunzz)
     await tap[0].click(event.chat_id)
     await event.delete()
+
+@borg.on(
+    admin_cmd(
+       pattern="نيم$"
+    )
+)
+async def gamez(event):
+    if event.fwd_from:
+        return
+    jmusername = "@nimBot"
+    uunzz = "play"
+    if event.reply_to_msg_id:
+        await event.get_reply_message()
+    tap = await bot.inline_query(jmusername, uunzz)
+    await tap[0].click(event.chat_id)
+    await event.delete()
