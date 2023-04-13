@@ -94,6 +94,7 @@ async def gamez(event):
     await tap[0].click(event.chat_id)
     await event.delete()
 
+
 @borg.on(
     admin_cmd(
        pattern="نيم$"
@@ -109,3 +110,5 @@ async def gamez(event):
     tap = await bot.inline_query(jmusername, uunzz)
     await tap[0].click(event.chat_id)
     await event.delete()
+
+
