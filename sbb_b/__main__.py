@@ -67,7 +67,14 @@ async def startup_process():
     return
 
 
+async def externalrepo():
+    if Config.VCMODE:
+        await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "crvc")
+
+
 sbb_b.loop.run_until_complete(startup_process())
+
+sbb_b.loop.run_until_complete(externalrepo())
 
 if len(sys.argv) in {1, 3, 4}:
     with contextlib.suppress(ConnectionError):
