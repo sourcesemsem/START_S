@@ -154,7 +154,8 @@ class Config(object):
     BOTLOG_CHATID = 0
     # ملفات الاوامر الاضافية
     EXTERNAL_REPOBRANCH = os.environ.get("EXTERNAL_REPOBRANCH", "main")
-
+    VC_REPO = os.environ.get("VC_REPO", "https://github.com/sourcesemsem/semovc")
+    VC_REPOBRANCH = os.environ.get("VC_REPOBRANCH", "main")
 
 class Production(Config):
     LOGGER = False
